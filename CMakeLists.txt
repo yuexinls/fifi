@@ -27,4 +27,8 @@ target_include_directories(fifi PRIVATE
 
 target_link_libraries(fifi PRIVATE glfw glad glm)
 
-
+add_custom_command(TARGET fifi POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/shaders
+    $<TARGET_FILE_DIR:fifi>/shaders
+)
