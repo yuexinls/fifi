@@ -72,7 +72,7 @@ int main() {
             int w, h;
             glfwGetFramebufferSize(window.handle(), &w, &h);
             glViewport(0, 0, w, h);
-            glClearColor(0.1f, 0.1f, 0.12f, 1.0f);
+            glClearColor(0.4f, 0.8f, 1.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
             float aspect = (float)w / (float)h;
