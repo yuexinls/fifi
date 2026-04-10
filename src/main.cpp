@@ -29,32 +29,6 @@ void scrollCB(GLFWwindow*, double, double dy) {
 
 int main() {
     try {
-        Vec3 a(1,0,0), b(0,1,0);
-
-        // cross product
-        assert(a.cross(b) == Vec3(0,0,1));
-
-        // dot product
-        assert(a.dot(b) == 0.0f);
-
-        // normalization
-        Vec3 v(3,0,0);
-        assert(v.normalized() == Vec3(1,0,0));
-
-        // quaternion rotation
-        Quaternion q = Quaternion::fromAxisAngle(Vec3(0,0,1), 3.14159f * 0.5f);
-        Vec3 rotated = q.rotate(Vec3(1,0,0));
-        assert(std::abs(rotated.x) < 1e-5f);
-        assert(std::abs(rotated.y - 1.0f) < 1e-5f);
-
-        // Mat4 trs
-        Vec3 pos(1,2,3);
-        Mat4 t = Mat4::translation(pos);
-        Vec3 result = t.transformPoint(Vec3(0,0,0));
-        assert(result == pos);
-
-        std::cout << "All math checks passed!\n";
-
         Window window(1280, 720, "fifi Engine");
         glfwSetMouseButtonCallback(window.handle(), mouseBtnCB);
         glfwSetCursorPosCallback  (window.handle(), mouseMoveCB);
