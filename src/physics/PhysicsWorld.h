@@ -40,7 +40,7 @@ private:
             if (body->isStatic()) continue;
 
             float halfHeight = body->scale.y * 0.5f;
-            float bottom = body->position.y + halfHeight;
+            float bottom = body->position.y - halfHeight;
 
             if (bottom < groundY) {
                 body->position.y = groundY + halfHeight;

@@ -3,6 +3,11 @@
 #include "math/Mat4.h"
 #include "math/Quaternion.h"
 
+enum class ShapeType {
+    Box,
+    Sphere
+};
+
 class RigidBody {
 public:
     // primary state
@@ -24,6 +29,7 @@ public:
     // rendering hints
     Vec3 color = { 0.4f, 0.6f, 1.0f };
     Vec3 scale = { 1.0f, 1.0f, 1.0f }; // visual only
+    ShapeType shape = ShapeType::Box;
 
     // constructor helpers
     static RigidBody createBox(float m,
@@ -35,12 +41,16 @@ public:
         rb.mass     = m;
         rb.invMass  = (m > 0.0f) ? 1.0f / m : 0.0f;
         rb.scale    = halfExtents * 2.0f;
+        rb.shape    = ShapeType::Box;
 
         // I = (1/12) * m * (h² + d²) for each axis
-        float ex = halfExtents.x, ey = halfExtents.y, ez = halfExtents.z;
-        float ix = (1.0f/12.0f) * m * (ey*ey + ez*ez) * 4;
-        float iy = (1.0f/12.0f) * m * (ex*ex + ez*ez) * 4;
-        float iz = (1.0f/12.0f) * m * (ex*ex + ey*ey) * 4;
+        float wx = halfExtents.x * 2.0f;
+        float wy = halfExtents.y * 2.0f;
+        float wz = halfExtents.z * 2.0f;
+
+        float ix = (1.0f/12.0f) * m * (wy*wy + wz*wz);
+        float iy = (1.0f/12.0f) * m * (wx*wx + wz*wz);
+        float iz = (1.0f/12.0f) * m * (wx*wx + wy*wy);
         rb.invInertiaTensorLocal = {
             (ix > 0) ? 1.0f/ix : 0.0f,
             (iy > 0) ? 1.0f/iy : 0.0f,
@@ -55,6 +65,7 @@ public:
         rb.mass     = m;
         rb.invMass  = (m > 0.0f) ? 1.0f / m : 0.0f;
         rb.scale    = { radius*2, radius*2, radius*2 };
+        rb.shape    = ShapeType::Sphere;
 
         // I = (2/5) * m * r² for a solid sphere
         float i = (2.0f/5.0f) * m * radius * radius;
@@ -71,9 +82,10 @@ public:
         rb.position = pos;
         rb.mass     = 0.0f;
         rb.invMass  = 0.0f;
-        rb.invInertiaTensorLocal = {};
+        rb.invInertiaTensorLocal = {0.0f, 0.0f, 0.0f};
         rb.scale    = halfExtents * 2.0f;
         rb.color    = {0.5f, 0.5f, 0.5f};
+        rb.shape    = ShapeType::Box;
         return rb;
     }
 
@@ -96,20 +108,6 @@ public:
     void clearAccumulators() {
         m_forceAccum = {};
         m_torqueAccum = {};
-    }
-
-    // intertia tensor in world space (recomputed each tick)
-
-    Vec3 getWorldInvInertia(const Vec3& localInvI) const {
-        // convert orientation quaternion to rotation matrix
-        Vec3 c0 = orientation.rotate({1,0,0});
-        Vec3 c1 = orientation.rotate({0,1,0});
-        Vec3 c2 = orientation.rotate({0,0,1});
-
-        // R * diag(I_inv) * R^T  applied to a vector is \/
-        // sum over axes:  (R_col_i · v) * localInvI[i] * R_col_i
-        (void)localInvI; (void)c0; (void)c1; (void)c2;
-        return localInvI;
     }
 
     // I_world_inv * v  =  R * (I_local_inv * (R^T * v))
@@ -136,7 +134,7 @@ public:
         linearVelocity += linearAccel * dt;
         
         // linear damping, mimics air resistance
-        linearVelocity *= std::pow(1.0f - linearDamping, dt);
+        linearVelocity *= std::exp(-linearDamping * dt);
         position       += linearVelocity * dt;
 
         // angular
@@ -144,7 +142,7 @@ public:
         angularVelocity  += angularAccel * dt;
 
         // angular damping, mimics rotational friction
-        angularVelocity *= std::pow(1.0f - angularDamping, dt);
+        angularVelocity *= std::exp(-angularDamping * dt);
 
         // integrate orientation via quaternion derivative
         orientation = orientation.integrateAngularVelocity(angularVelocity, dt);
