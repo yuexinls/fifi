@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\notme\OneDrive\Documents\Code Projects\fifi\build\CMakeFiles\ffc7a310f8176b691ac91f29dbe796b5\update_mappings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\src\mappings.h.in">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\notme\OneDrive\Documents\Code Projects\fifi\build\third_party\glfw\src\CMakeFiles\update_mappings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{16D9F477-E7A7-3133-9471-C690B4EBBCDF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C46DF954-ABF1-356A-A7C5-C501693D211C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

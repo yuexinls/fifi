@@ -1,0 +1,16 @@
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/glad.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/fifi.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/INSTALL.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/CMakeFiles/uninstall.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/CMakeFiles/INSTALL.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/src/CMakeFiles/glfw.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/src/CMakeFiles/update_mappings.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/src/CMakeFiles/INSTALL.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/docs/CMakeFiles/INSTALL.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glm/CMakeFiles/INSTALL.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glm/CMakeFiles/ALL_BUILD.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glm/glm/CMakeFiles/glm.dir
+C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glm/glm/CMakeFiles/INSTALL.dir

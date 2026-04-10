@@ -1,0 +1,10 @@
+^C:\USERS\NOTME\ONEDRIVE\DOCUMENTS\CODE PROJECTS\FIFI\BUILD\CMAKEFILES\3E42A1EC934BE01E5FBB5E207455AB53\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/notme/OneDrive/Documents/Code Projects/fifi" "-BC:/Users/notme/OneDrive/Documents/Code Projects/fifi/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/fifi.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

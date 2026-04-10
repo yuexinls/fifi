@@ -1,0 +1,2032 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild Òü«ÒâÉÒâ╝Òé©ÒâºÒâ│ 17.14.18+a338add32 (.NET Framework)
+      2026/04/11 3:20:10 Òü½ÒâôÒâ½ÒâëÒéÆÚûïÕºïÒüùÒü¥ÒüùÒüƒÒÇé
+      
+      ÒâÄÒâ╝Òâë 1 õ©èÒü«ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê)ÒÇé
+      PrepareForBuild:
+        ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "Debug\\CompilerIdC.tlog\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+      InitializeBuildStatus:
+        "AlwaysCreate" ÒüîµîçÕ«ÜÒüòÒéîÒüƒÒüƒÒéü "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' is not recognized as an internal or external command,
+        operable program or batch file.
+        Òé│Òâ×Òâ│Òâë "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"" Òü»Òé│Òâ╝Òâë 9009 ÒüºþÁéõ║åÒüùÒü¥ÒüùÒüƒÒÇé
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ÒâòÒéíÒéñÒâ½ "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" ÒéÆÕëèÚÖñÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+      ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) Òü«ÒâôÒâ½ÒâëÒüîÕ«îõ║åÒüùÒü¥ÒüùÒüƒÒÇé
+      
+      ÒâôÒâ½ÒâëÒü½µêÉÕèƒÒüùÒü¥ÒüùÒüƒÒÇé
+          0 ÕÇïÒü«Þ¡ªÕæè
+          0 Òé¿Òâ®Òâ╝
+      
+      þÁîÚüÄµÖéÚûô 00:00:04.23
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/4.1.0-rc4/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/ukmm/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/"
+      - "C:/Users/notme/AppD/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/notme/.lmstudio/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/ukmm/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/"
+      - "C:/Users/notme/AppD/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/notme/.lmstudio/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Python314/Scripts/lld-link.com"
+      - "C:/Python314/Scripts/lld-link.exe"
+      - "C:/Python314/Scripts/lld-link"
+      - "C:/Python314/lld-link.com"
+      - "C:/Python314/lld-link.exe"
+      - "C:/Python314/lld-link"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/lld-link.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/lld-link.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/lld-link"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/lld-link.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/lld-link.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/ukmm/bin/lld-link.com"
+      - "C:/Program Files/ukmm/bin/lld-link.exe"
+      - "C:/Program Files/ukmm/bin/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/lld-link"
+      - "C:/Users/notme/AppD/lld-link.com"
+      - "C:/Users/notme/AppD/lld-link.exe"
+      - "C:/Users/notme/AppD/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/notme/.lmstudio/bin/lld-link.com"
+      - "C:/Users/notme/.lmstudio/bin/lld-link.exe"
+      - "C:/Users/notme/.lmstudio/bin/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/ukmm/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/"
+      - "C:/Users/notme/AppD/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/notme/.lmstudio/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/ukmm/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/"
+      - "C:/Users/notme/AppD/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/notme/.lmstudio/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/mt.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/mt.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/mt"
+      - "C:/Python314/Scripts/mt.com"
+      - "C:/Python314/Scripts/mt.exe"
+      - "C:/Python314/Scripts/mt"
+      - "C:/Python314/mt.com"
+      - "C:/Python314/mt.exe"
+      - "C:/Python314/mt"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/mt.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/mt.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/mt"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/mt.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/mt.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/mt"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/mt.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/mt.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/mt"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Program Files/ukmm/bin/mt.com"
+      - "C:/Program Files/ukmm/bin/mt.exe"
+      - "C:/Program Files/ukmm/bin/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "C:/Program Files/Docker/Docker/resources/bin/mt.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/mt.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/mt"
+      - "C:/Program Files/nodejs/mt.com"
+      - "C:/Program Files/nodejs/mt.exe"
+      - "C:/Program Files/nodejs/mt"
+      - "C:/ProgramData/chocolatey/bin/mt.com"
+      - "C:/ProgramData/chocolatey/bin/mt.exe"
+      - "C:/ProgramData/chocolatey/bin/mt"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/mt.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/mt.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/mt"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/mt.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/mt.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/mt"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/mt.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/mt.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/mt"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/mt.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/mt.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/mt"
+      - "C:/Users/notme/AppD/mt.com"
+      - "C:/Users/notme/AppD/mt.exe"
+      - "C:/Users/notme/AppD/mt"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/mt.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/mt.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/mt"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/notme/.lmstudio/bin/mt.com"
+      - "C:/Users/notme/.lmstudio/bin/mt.exe"
+      - "C:/Users/notme/.lmstudio/bin/mt"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/mt.com"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/mt.exe"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/ukmm/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/"
+      - "C:/Users/notme/AppD/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/notme/.lmstudio/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild Òü«ÒâÉÒâ╝Òé©ÒâºÒâ│ 17.14.18+a338add32 (.NET Framework)
+      2026/04/11 3:20:15 Òü½ÒâôÒâ½ÒâëÒéÆÚûïÕºïÒüùÒü¥ÒüùÒüƒÒÇé
+      
+      ÒâÄÒâ╝Òâë 1 õ©èÒü«ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê)ÒÇé
+      PrepareForBuild:
+        ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "Debug\\CompilerIdCXX.tlog\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+      InitializeBuildStatus:
+        "AlwaysCreate" ÒüîµîçÕ«ÜÒüòÒéîÒüƒÒüƒÒéü "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' is not recognized as an internal or external command,
+        operable program or batch file.
+        Òé│Òâ×Òâ│Òâë "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"" Òü»Òé│Òâ╝Òâë 9009 ÒüºþÁéõ║åÒüùÒü¥ÒüùÒüƒÒÇé
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ÒâòÒéíÒéñÒâ½ "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" ÒéÆÕëèÚÖñÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+      ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) Òü«ÒâôÒâ½ÒâëÒüîÕ«îõ║åÒüùÒü¥ÒüùÒüƒÒÇé
+      
+      ÒâôÒâ½ÒâëÒü½µêÉÕèƒÒüùÒü¥ÒüùÒüƒÒÇé
+          0 ÕÇïÒü«Þ¡ªÕæè
+          0 Òé¿Òâ®Òâ╝
+      
+      þÁîÚüÄµÖéÚûô 00:00:02.57
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/ukmm/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/"
+      - "C:/Users/notme/AppD/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/notme/.lmstudio/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Python314/Scripts/lld-link.com"
+      - "C:/Python314/Scripts/lld-link.exe"
+      - "C:/Python314/Scripts/lld-link"
+      - "C:/Python314/lld-link.com"
+      - "C:/Python314/lld-link.exe"
+      - "C:/Python314/lld-link"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/lld-link.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/lld-link.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/lld-link"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/lld-link.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/lld-link.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/ukmm/bin/lld-link.com"
+      - "C:/Program Files/ukmm/bin/lld-link.exe"
+      - "C:/Program Files/ukmm/bin/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/lld-link"
+      - "C:/Users/notme/AppD/lld-link.com"
+      - "C:/Users/notme/AppD/lld-link.exe"
+      - "C:/Users/notme/AppD/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/notme/.lmstudio/bin/lld-link.com"
+      - "C:/Users/notme/.lmstudio/bin/lld-link.exe"
+      - "C:/Users/notme/.lmstudio/bin/lld-link"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/lld-link.com"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/lld-link.exe"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:573 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:546 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/ukmm/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/"
+      - "C:/Users/notme/AppD/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/notme/.lmstudio/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/fifi/bin/"
+      - "C:/Program Files (x86)/fifi/sbin/"
+      - "C:/Program Files (x86)/fifi/"
+    searched_directories:
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/rc.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/rc.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/rc"
+      - "C:/Python314/Scripts/rc.com"
+      - "C:/Python314/Scripts/rc.exe"
+      - "C:/Python314/Scripts/rc"
+      - "C:/Python314/rc.com"
+      - "C:/Python314/rc.exe"
+      - "C:/Python314/rc"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/rc.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/rc.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/rc"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/rc.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/rc.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/rc"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/rc.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/rc.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/rc"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Program Files/ukmm/bin/rc.com"
+      - "C:/Program Files/ukmm/bin/rc.exe"
+      - "C:/Program Files/ukmm/bin/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "C:/Program Files/Docker/Docker/resources/bin/rc.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/rc.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/rc"
+      - "C:/Program Files/nodejs/rc.com"
+      - "C:/Program Files/nodejs/rc.exe"
+      - "C:/Program Files/nodejs/rc"
+      - "C:/ProgramData/chocolatey/bin/rc.com"
+      - "C:/ProgramData/chocolatey/bin/rc.exe"
+      - "C:/ProgramData/chocolatey/bin/rc"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/rc.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/rc.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/rc"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/rc.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/rc.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/rc"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/rc.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/rc.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/rc"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/rc.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/rc.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/rc"
+      - "C:/Users/notme/AppD/rc.com"
+      - "C:/Users/notme/AppD/rc.exe"
+      - "C:/Users/notme/AppD/rc"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/rc.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/rc.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/rc"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/notme/.lmstudio/bin/rc.com"
+      - "C:/Users/notme/.lmstudio/bin/rc.exe"
+      - "C:/Users/notme/.lmstudio/bin/rc"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/rc.com"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/rc.exe"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files (x86)/fifi/bin/rc.com"
+      - "C:/Program Files (x86)/fifi/bin/rc.exe"
+      - "C:/Program Files (x86)/fifi/bin/rc"
+      - "C:/Program Files (x86)/fifi/sbin/rc.com"
+      - "C:/Program Files (x86)/fifi/sbin/rc.exe"
+      - "C:/Program Files (x86)/fifi/sbin/rc"
+      - "C:/Program Files (x86)/fifi/rc.com"
+      - "C:/Program Files (x86)/fifi/rc.exe"
+      - "C:/Program Files (x86)/fifi/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/fifi"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/fifi"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-72z4yv"
+      binary: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-72z4yv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-72z4yv'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_54ca3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild Òü«ÒâÉÒâ╝Òé©ÒâºÒâ│ 17.14.18+a338add32 (.NET Framework)
+        2026/04/11 3:20:18 Òü½ÒâôÒâ½ÒâëÒéÆÚûïÕºïÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        ÒâÄÒâ╝Òâë 1 õ©èÒü«ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72z4yv\\cmTC_54ca3.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê)ÒÇé
+        PrepareForBuild:
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_54ca3.dir\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72z4yv\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_54ca3.dir\\Debug\\cmTC_54ca3.tlog\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        InitializeBuildStatus:
+          "AlwaysCreate" ÒüîµîçÕ«ÜÒüòÒéîÒüƒÒüƒÒéü "cmTC_54ca3.dir\\Debug\\cmTC_54ca3.tlog\\unsuccessfulbuild" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          "cmTC_54ca3.dir\\Debug\\cmTC_54ca3.tlog\\unsuccessfulbuild" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_54ca3.dir\\Debug\\\\" /Fd"cmTC_54ca3.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_54ca3.dir\\Debug\\\\" /Fd"cmTC_54ca3.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72z4yv\\Debug\\cmTC_54ca3.exe" /INCREMENTAL /ILK:"cmTC_54ca3.dir\\Debug\\cmTC_54ca3.ilk" /NOLOGO /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-72z4yv/Debug/cmTC_54ca3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-72z4yv/Debug/cmTC_54ca3.lib" /MACHINE:X64  /machine:x64 cmTC_54ca3.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_54ca3.vcxproj -> C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72z4yv\\Debug\\cmTC_54ca3.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72z4yv\\Debug\\cmTC_54ca3.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_54ca3.dir\\Debug\\cmTC_54ca3.tlog\\cmTC_54ca3.write.1u.tlog" "cmTC_54ca3.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' is not recognized as an internal or external command,
+          operable program or batch file.
+          Òé│Òâ×Òâ│Òâë "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72z4yv\\Debug\\cmTC_54ca3.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_54ca3.dir\\Debug\\cmTC_54ca3.tlog\\cmTC_54ca3.write.1u.tlog" "cmTC_54ca3.dir\\Debug\\vcpkg.applocal.log"" Òü»Òé│Òâ╝Òâë 9009 ÒüºþÁéõ║åÒüùÒü¥ÒüùÒüƒÒÇé
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72z4yv\\Debug\\cmTC_54ca3.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_54ca3.dir\\Debug\\cmTC_54ca3.tlog\\cmTC_54ca3.write.1u.tlog" "cmTC_54ca3.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          ÒâòÒéíÒéñÒâ½ "cmTC_54ca3.dir\\Debug\\cmTC_54ca3.tlog\\unsuccessfulbuild" ÒéÆÕëèÚÖñÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          "cmTC_54ca3.dir\\Debug\\cmTC_54ca3.tlog\\cmTC_54ca3.lastbuildstate" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72z4yv\\cmTC_54ca3.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) Òü«ÒâôÒâ½ÒâëÒüîÕ«îõ║åÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        ÒâôÒâ½ÒâëÒü½µêÉÕèƒÒüùÒü¥ÒüùÒüƒÒÇé
+            0 ÕÇïÒü«Þ¡ªÕæè
+            0 Òé¿Òâ®Òâ╝
+        
+        þÁîÚüÄµÖéÚûô 00:00:02.32
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35214.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-oqsc6k"
+      binary: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-oqsc6k"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-oqsc6k'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c6805.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild Òü«ÒâÉÒâ╝Òé©ÒâºÒâ│ 17.14.18+a338add32 (.NET Framework)
+        2026/04/11 3:20:21 Òü½ÒâôÒâ½ÒâëÒéÆÚûïÕºïÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        ÒâÄÒâ╝Òâë 1 õ©èÒü«ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oqsc6k\\cmTC_c6805.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê)ÒÇé
+        PrepareForBuild:
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_c6805.dir\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oqsc6k\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_c6805.dir\\Debug\\cmTC_c6805.tlog\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        InitializeBuildStatus:
+          "AlwaysCreate" ÒüîµîçÕ«ÜÒüòÒéîÒüƒÒüƒÒéü "cmTC_c6805.dir\\Debug\\cmTC_c6805.tlog\\unsuccessfulbuild" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          "cmTC_c6805.dir\\Debug\\cmTC_c6805.tlog\\unsuccessfulbuild" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_c6805.dir\\Debug\\\\" /Fd"cmTC_c6805.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_c6805.dir\\Debug\\\\" /Fd"cmTC_c6805.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oqsc6k\\Debug\\cmTC_c6805.exe" /INCREMENTAL /ILK:"cmTC_c6805.dir\\Debug\\cmTC_c6805.ilk" /NOLOGO /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-oqsc6k/Debug/cmTC_c6805.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-oqsc6k/Debug/cmTC_c6805.lib" /MACHINE:X64  /machine:x64 cmTC_c6805.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_c6805.vcxproj -> C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oqsc6k\\Debug\\cmTC_c6805.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oqsc6k\\Debug\\cmTC_c6805.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_c6805.dir\\Debug\\cmTC_c6805.tlog\\cmTC_c6805.write.1u.tlog" "cmTC_c6805.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' is not recognized as an internal or external command,
+          operable program or batch file.
+          Òé│Òâ×Òâ│Òâë "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oqsc6k\\Debug\\cmTC_c6805.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_c6805.dir\\Debug\\cmTC_c6805.tlog\\cmTC_c6805.write.1u.tlog" "cmTC_c6805.dir\\Debug\\vcpkg.applocal.log"" Òü»Òé│Òâ╝Òâë 9009 ÒüºþÁéõ║åÒüùÒü¥ÒüùÒüƒÒÇé
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\notme\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oqsc6k\\Debug\\cmTC_c6805.exe" "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_c6805.dir\\Debug\\cmTC_c6805.tlog\\cmTC_c6805.write.1u.tlog" "cmTC_c6805.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          ÒâòÒéíÒéñÒâ½ "cmTC_c6805.dir\\Debug\\cmTC_c6805.tlog\\unsuccessfulbuild" ÒéÆÕëèÚÖñÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          "cmTC_c6805.dir\\Debug\\cmTC_c6805.tlog\\cmTC_c6805.lastbuildstate" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oqsc6k\\cmTC_c6805.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) Òü«ÒâôÒâ½ÒâëÒüîÕ«îõ║åÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        ÒâôÒâ½ÒâëÒü½µêÉÕèƒÒüùÒü¥ÒüùÒüƒÒÇé
+            0 ÕÇïÒü«Þ¡ªÕæè
+            0 Òé¿Òâ®Òâ╝
+        
+        þÁîÚüÄµÖéÚûô 00:00:02.16
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35214.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "third_party/glfw/CMakeLists.txt:48 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-x87mgw"
+      binary: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-x87mgw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/third_party/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-x87mgw'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f91ee.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild Òü«ÒâÉÒâ╝Òé©ÒâºÒâ│ 17.14.18+a338add32 (.NET Framework)
+        2026/04/11 3:20:24 Òü½ÒâôÒâ½ÒâëÒéÆÚûïÕºïÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        ÒâÄÒâ╝Òâë 1 õ©èÒü«ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\cmTC_f91ee.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê)ÒÇé
+        PrepareForBuild:
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_f91ee.dir\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_f91ee.dir\\Debug\\cmTC_f91ee.tlog\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        InitializeBuildStatus:
+          "AlwaysCreate" ÒüîµîçÕ«ÜÒüòÒéîÒüƒÒüƒÒéü "cmTC_f91ee.dir\\Debug\\cmTC_f91ee.tlog\\unsuccessfulbuild" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          "cmTC_f91ee.dir\\Debug\\cmTC_f91ee.tlog\\unsuccessfulbuild" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_f91ee.dir\\Debug\\\\" /Fd"cmTC_f91ee.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_f91ee.dir\\Debug\\\\" /Fd"cmTC_f91ee.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\src.c"
+          src.c
+        C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\cmTC_f91ee.vcxproj]
+        ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\cmTC_f91ee.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) Òü«ÒâôÒâ½ÒâëÒüîþÁéõ║åÒüùÒü¥ÒüùÒüƒ -- Õñ▒µòùÒÇé
+        
+        ÒâôÒâ½ÒâëÒü½Õñ▒µòùÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\cmTC_f91ee.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) (1) ->
+        (ClCompile Òé┐Òâ╝Òé▓ÒââÒâê) -> 
+          C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x87mgw\\cmTC_f91ee.vcxproj]
+        
+            0 ÕÇïÒü«Þ¡ªÕæè
+            1 Òé¿Òâ®Òâ╝
+        
+        þÁîÚüÄµÖéÚûô 00:00:00.77
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "third_party/glfw/CMakeLists.txt:48 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-vmlidg"
+      binary: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-vmlidg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/third_party/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-vmlidg'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e8a06.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild Òü«ÒâÉÒâ╝Òé©ÒâºÒâ│ 17.14.18+a338add32 (.NET Framework)
+        2026/04/11 3:20:25 Òü½ÒâôÒâ½ÒâëÒéÆÚûïÕºïÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        ÒâÄÒâ╝Òâë 1 õ©èÒü«ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\cmTC_e8a06.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê)ÒÇé
+        PrepareForBuild:
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_e8a06.dir\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_e8a06.dir\\Debug\\cmTC_e8a06.tlog\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        InitializeBuildStatus:
+          "AlwaysCreate" ÒüîµîçÕ«ÜÒüòÒéîÒüƒÒüƒÒéü "cmTC_e8a06.dir\\Debug\\cmTC_e8a06.tlog\\unsuccessfulbuild" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          "cmTC_e8a06.dir\\Debug\\cmTC_e8a06.tlog\\unsuccessfulbuild" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_e8a06.dir\\Debug\\\\" /Fd"cmTC_e8a06.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_e8a06.dir\\Debug\\\\" /Fd"cmTC_e8a06.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\Debug\\cmTC_e8a06.exe" /INCREMENTAL /ILK:"cmTC_e8a06.dir\\Debug\\cmTC_e8a06.ilk" /NOLOGO /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-vmlidg/Debug/cmTC_e8a06.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-vmlidg/Debug/cmTC_e8a06.lib" /MACHINE:X64  /machine:x64 cmTC_e8a06.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\cmTC_e8a06.vcxproj]
+        ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\cmTC_e8a06.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) Òü«ÒâôÒâ½ÒâëÒüîþÁéõ║åÒüùÒü¥ÒüùÒüƒ -- Õñ▒µòùÒÇé
+        
+        ÒâôÒâ½ÒâëÒü½Õñ▒µòùÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\cmTC_e8a06.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) (1) ->
+        (Link Òé┐Òâ╝Òé▓ÒââÒâê) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmlidg\\cmTC_e8a06.vcxproj]
+        
+            0 ÕÇïÒü«Þ¡ªÕæè
+            1 Òé¿Òâ®Òâ╝
+        
+        þÁîÚüÄµÖéÚûô 00:00:00.90
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "third_party/glfw/CMakeLists.txt:48 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-pr37x7"
+      binary: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-pr37x7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/third_party/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-pr37x7'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e653f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild Òü«ÒâÉÒâ╝Òé©ÒâºÒâ│ 17.14.18+a338add32 (.NET Framework)
+        2026/04/11 3:20:27 Òü½ÒâôÒâ½ÒâëÒéÆÚûïÕºïÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        ÒâÄÒâ╝Òâë 1 õ©èÒü«ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\cmTC_e653f.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê)ÒÇé
+        PrepareForBuild:
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_e653f.dir\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\Debug\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          ÒâçÒéúÒâ¼Òé»ÒâêÒâ¬ "cmTC_e653f.dir\\Debug\\cmTC_e653f.tlog\\" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        InitializeBuildStatus:
+          "AlwaysCreate" ÒüîµîçÕ«ÜÒüòÒéîÒüƒÒüƒÒéü "cmTC_e653f.dir\\Debug\\cmTC_e653f.tlog\\unsuccessfulbuild" ÒéÆõ¢£µêÉÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+          "cmTC_e653f.dir\\Debug\\cmTC_e653f.tlog\\unsuccessfulbuild" Òü«Òé┐ÒââÒâü Òé┐Òé╣Òé»ÒéÆÕ«ƒÞíîÒüùÒüªÒüäÒü¥ÒüÖÒÇé
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_e653f.dir\\Debug\\\\" /Fd"cmTC_e653f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_e653f.dir\\Debug\\\\" /Fd"cmTC_e653f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\Debug\\cmTC_e653f.exe" /INCREMENTAL /ILK:"cmTC_e653f.dir\\Debug\\cmTC_e653f.ilk" /NOLOGO /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\notme\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-pr37x7/Debug/cmTC_e653f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/CMakeFiles/CMakeScratch/TryCompile-pr37x7/Debug/cmTC_e653f.lib" /MACHINE:X64  /machine:x64 cmTC_e653f.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\cmTC_e653f.vcxproj]
+        ÒâùÒâ¡Òé©ÒéºÒé»Òâê "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\cmTC_e653f.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) Òü«ÒâôÒâ½ÒâëÒüîþÁéõ║åÒüùÒü¥ÒüùÒüƒ -- Õñ▒µòùÒÇé
+        
+        ÒâôÒâ½ÒâëÒü½Õñ▒µòùÒüùÒü¥ÒüùÒüƒÒÇé
+        
+        "C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\cmTC_e653f.vcxproj" (µùóÕ«ÜÒü«Òé┐Òâ╝Òé▓ÒââÒâê) (1) ->
+        (Link Òé┐Òâ╝Òé▓ÒââÒâê) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\notme\\OneDrive\\Documents\\Code Projects\\fifi\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pr37x7\\cmTC_e653f.vcxproj]
+        
+            0 ÕÇïÒü«Þ¡ªÕæè
+            1 Òé¿Òâ®Òâ╝
+        
+        þÁîÚüÄµÖéÚûô 00:00:00.95
+        
+      exitCode: 1
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindDoxygen.cmake:753 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindDoxygen.cmake:937 (_Doxygen_find_doxygen)"
+      - "third_party/glfw/docs/CMakeLists.txt:39 (find_package)"
+    mode: "program"
+    variable: "DOXYGEN_EXECUTABLE"
+    description: "Doxygen documentation generation tool (https://www.doxygen.nl)"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "doxygen"
+    candidate_directories:
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/ukmm/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/"
+      - "C:/Users/notme/AppD/"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/notme/.lmstudio/bin/"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/fifi/bin/"
+      - "C:/Program Files (x86)/fifi/sbin/"
+      - "C:/Program Files (x86)/fifi/"
+      - "/REGISTRY-NOTFOUND/bin/"
+      - "/Applications/Doxygen.app/Contents/Resources/"
+      - "/Applications/Doxygen.app/Contents/MacOS/"
+      - "/Applications/Utilities/Doxygen.app/Contents/Resources/"
+      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/"
+    searched_directories:
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/doxygen.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/doxygen.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/doxygen"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/doxygen.com"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/doxygen.exe"
+      - "C:/Users/notme/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/doxygen"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/doxygen.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/doxygen.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/doxygen"
+      - "C:/Python314/Scripts/doxygen.com"
+      - "C:/Python314/Scripts/doxygen.exe"
+      - "C:/Python314/Scripts/doxygen"
+      - "C:/Python314/doxygen.com"
+      - "C:/Python314/doxygen.exe"
+      - "C:/Python314/doxygen"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/doxygen.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/doxygen.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/doxygen"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/doxygen.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/doxygen.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-22.0.2.9-hotspot/bin/doxygen"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/doxygen.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/doxygen.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/doxygen"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/doxygen.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/doxygen.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/doxygen"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/doxygen.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/doxygen.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/doxygen"
+      - "C:/Windows/System32/doxygen.com"
+      - "C:/Windows/System32/doxygen.exe"
+      - "C:/Windows/System32/doxygen"
+      - "C:/Windows/doxygen.com"
+      - "C:/Windows/doxygen.exe"
+      - "C:/Windows/doxygen"
+      - "C:/Windows/System32/wbem/doxygen.com"
+      - "C:/Windows/System32/wbem/doxygen.exe"
+      - "C:/Windows/System32/wbem/doxygen"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/doxygen.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/doxygen.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/doxygen"
+      - "C:/Windows/System32/OpenSSH/doxygen.com"
+      - "C:/Windows/System32/OpenSSH/doxygen.exe"
+      - "C:/Windows/System32/OpenSSH/doxygen"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/doxygen.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/doxygen.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/doxygen"
+      - "C:/Program Files/dotnet/doxygen.com"
+      - "C:/Program Files/dotnet/doxygen.exe"
+      - "C:/Program Files/dotnet/doxygen"
+      - "C:/Program Files/ukmm/bin/doxygen.com"
+      - "C:/Program Files/ukmm/bin/doxygen.exe"
+      - "C:/Program Files/ukmm/bin/doxygen"
+      - "C:/Program Files/Git/cmd/doxygen.com"
+      - "C:/Program Files/Git/cmd/doxygen.exe"
+      - "C:/Program Files/Git/cmd/doxygen"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen"
+      - "C:/Program Files/CMake/bin/doxygen.com"
+      - "C:/Program Files/CMake/bin/doxygen.exe"
+      - "C:/Program Files/CMake/bin/doxygen"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/doxygen.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/doxygen.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/doxygen"
+      - "C:/Program Files/Docker/Docker/resources/bin/doxygen.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/doxygen.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/doxygen"
+      - "C:/Program Files/nodejs/doxygen.com"
+      - "C:/Program Files/nodejs/doxygen.exe"
+      - "C:/Program Files/nodejs/doxygen"
+      - "C:/ProgramData/chocolatey/bin/doxygen.com"
+      - "C:/ProgramData/chocolatey/bin/doxygen.exe"
+      - "C:/ProgramData/chocolatey/bin/doxygen"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/doxygen.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/doxygen.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/Scripts/doxygen"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/doxygen.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/doxygen.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python311/doxygen"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/doxygen.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/doxygen.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/Scripts/doxygen"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/doxygen.com"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/doxygen.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Python/Python38/doxygen"
+      - "C:/Users/notme/AppD/doxygen.com"
+      - "C:/Users/notme/AppD/doxygen.exe"
+      - "C:/Users/notme/AppD/doxygen"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/doxygen.com"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/doxygen.exe"
+      - "C:/Users/notme/AppData/Local/Programs/Microsoft VS Code/bin/doxygen"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/doxygen.com"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/doxygen.exe"
+      - "C:/Users/notme/AppData/Local/Microsoft/WindowsApps/doxygen"
+      - "C:/Users/notme/.lmstudio/bin/doxygen.com"
+      - "C:/Users/notme/.lmstudio/bin/doxygen.exe"
+      - "C:/Users/notme/.lmstudio/bin/doxygen"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/doxygen.com"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/doxygen.exe"
+      - "C:/Users/notme/AppData/Local/Programs/cursor/resources/app/bin/doxygen"
+      - "C:/Program Files/bin/doxygen.com"
+      - "C:/Program Files/bin/doxygen.exe"
+      - "C:/Program Files/bin/doxygen"
+      - "C:/Program Files/sbin/doxygen.com"
+      - "C:/Program Files/sbin/doxygen.exe"
+      - "C:/Program Files/sbin/doxygen"
+      - "C:/Program Files/doxygen.com"
+      - "C:/Program Files/doxygen.exe"
+      - "C:/Program Files/doxygen"
+      - "C:/Program Files (x86)/bin/doxygen.com"
+      - "C:/Program Files (x86)/bin/doxygen.exe"
+      - "C:/Program Files (x86)/bin/doxygen"
+      - "C:/Program Files (x86)/sbin/doxygen.com"
+      - "C:/Program Files (x86)/sbin/doxygen.exe"
+      - "C:/Program Files (x86)/sbin/doxygen"
+      - "C:/Program Files (x86)/doxygen.com"
+      - "C:/Program Files (x86)/doxygen.exe"
+      - "C:/Program Files (x86)/doxygen"
+      - "C:/Program Files/CMake/bin/doxygen.com"
+      - "C:/Program Files/CMake/bin/doxygen.exe"
+      - "C:/Program Files/CMake/bin/doxygen"
+      - "C:/Program Files/CMake/sbin/doxygen.com"
+      - "C:/Program Files/CMake/sbin/doxygen.exe"
+      - "C:/Program Files/CMake/sbin/doxygen"
+      - "C:/Program Files/CMake/doxygen.com"
+      - "C:/Program Files/CMake/doxygen.exe"
+      - "C:/Program Files/CMake/doxygen"
+      - "C:/Program Files (x86)/fifi/bin/doxygen.com"
+      - "C:/Program Files (x86)/fifi/bin/doxygen.exe"
+      - "C:/Program Files (x86)/fifi/bin/doxygen"
+      - "C:/Program Files (x86)/fifi/sbin/doxygen.com"
+      - "C:/Program Files (x86)/fifi/sbin/doxygen.exe"
+      - "C:/Program Files (x86)/fifi/sbin/doxygen"
+      - "C:/Program Files (x86)/fifi/doxygen.com"
+      - "C:/Program Files (x86)/fifi/doxygen.exe"
+      - "C:/Program Files (x86)/fifi/doxygen"
+      - "/REGISTRY-NOTFOUND/bin/doxygen.com"
+      - "/REGISTRY-NOTFOUND/bin/doxygen.exe"
+      - "/REGISTRY-NOTFOUND/bin/doxygen"
+      - "/Applications/Doxygen.app/Contents/Resources/doxygen.com"
+      - "/Applications/Doxygen.app/Contents/Resources/doxygen.exe"
+      - "/Applications/Doxygen.app/Contents/Resources/doxygen"
+      - "/Applications/Doxygen.app/Contents/MacOS/doxygen.com"
+      - "/Applications/Doxygen.app/Contents/MacOS/doxygen.exe"
+      - "/Applications/Doxygen.app/Contents/MacOS/doxygen"
+      - "/Applications/Utilities/Doxygen.app/Contents/Resources/doxygen.com"
+      - "/Applications/Utilities/Doxygen.app/Contents/Resources/doxygen.exe"
+      - "/Applications/Utilities/Doxygen.app/Contents/Resources/doxygen"
+      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/doxygen.com"
+      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/doxygen.exe"
+      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/doxygen"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\notme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-22.0.2.9-hotspot\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\ukmm\\bin\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Python\\Python38\\"
+        - "C:\\Users\\notme\\AppD"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\notme\\.lmstudio\\bin"
+        - "C:\\Users\\notme\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/fifi"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/fifi"
+...

@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/cmake_install.cmake",
+		"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/cmake_install.cmake",
+		"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/src/cmake_install.cmake",
+		"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glfw/docs/cmake_install.cmake",
+		"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glm/cmake_install.cmake",
+		"C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glm/glm/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

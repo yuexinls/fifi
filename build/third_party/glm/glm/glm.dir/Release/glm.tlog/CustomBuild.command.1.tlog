@@ -1,0 +1,10 @@
+^C:\USERS\NOTME\ONEDRIVE\DOCUMENTS\CODE PROJECTS\FIFI\THIRD_PARTY\GLM\GLM\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/notme/OneDrive/Documents/Code Projects/fifi" "-BC:/Users/notme/OneDrive/Documents/Code Projects/fifi/build" --check-stamp-file "C:/Users/notme/OneDrive/Documents/Code Projects/fifi/build/third_party/glm/glm/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
