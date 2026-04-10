@@ -1,8 +1,8 @@
-#include <core/Window.h>
-#include <renderer/Shader.h>
-#include <renderer/Mesh.h>
-#include <renderer/Camera.h>
-#include <math/Mat4.h>
+#include "core/Window.h"
+#include "renderer/Shader.h"
+#include "renderer/Mesh.h"
+#include "renderer/Camera.h"
+#include "physics/PhysicsWorld.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
 
@@ -35,7 +35,29 @@ int main() {
         glfwSetScrollCallback     (window.handle(), scrollCB);
 
         Shader shader("shaders/basic.vert", "shaders/basic.frag");
-        Mesh   cube = Mesh::createCube();
+        Mesh   cubeMesh = Mesh::createCube();
+
+        // build scene
+        PhysicsWorld world;
+        world.groundY = -3.0f;
+
+        // static floor
+        auto* floor = world.addBody(RigidBody::createStatic(
+            {0, -4.0f, 0}, {6, 0.5f, 6}));
+
+        // a stack of boxes
+        auto* b0 = world.addBody(RigidBody::createBox(1.0f, {0.5f,0.5f,0.5f}, {0, 4,   0}));
+        auto* b1 = world.addBody(RigidBody::createBox(1.0f, {0.5f,0.5f,0.5f}, {0, 5.5f, 0}));
+        auto* b2 = world.addBody(RigidBody::createBox(2.0f, {0.7f,0.7f,0.7f}, {0.3f, 7, 0}));
+
+        // a little bit of spin to see angular integration
+        b0->angularVelocity = { 0.5f, 1.2f, 0.3f };
+        b1->angularVelocity = {-0.8f, 0.4f, 1.0f };
+
+        // a sphere
+        auto* sphere = world.addBody(RigidBody::createSphere(1.5f, 0.6f, {2, 5, 0}));
+        sphere->color = { 1.0f, 0.5f, 0.3f };
+        sphere->linearVelocity = { -1.0f, 0, 0 };
 
         // fixed timestep
         const double FIXED_DT = 1.0 / 120.0; // 120 hz
@@ -51,7 +73,7 @@ int main() {
             accumulator += dt;
 
             while (accumulator >= FIXED_DT) {
-                // physicsWorld.step(FIXED_DT); <- later
+                world.step((float)FIXED_DT);
                 accumulator -= FIXED_DT;
             }
 
@@ -63,21 +85,19 @@ int main() {
 
             float aspect = (float)w / (float)h;
 
-            // rotate cube slowly aww its so cute
-            float angle = (float)glfwGetTime() * 30.0f;
-            glm::mat4 model = glm::rotate(glm::mat4(1.0f),
-                                        glm::radians(angle),
-                                        glm::vec3(0.3f, 1.0f, 0.2f));
-
             shader.bind();
-            shader.setMat4 ("uModel",      model);
             shader.setMat4 ("uView",       camera.view());
             shader.setMat4 ("uProjection", camera.projection(aspect));
-            shader.setVec3 ("uColor",      {0.4f, 0.6f, 1.0f});
-            shader.setVec3 ("uLightPos",   {5.0f, 8.0f, 5.0f});
+            shader.setVec3 ("uLightPos",   {5, 10, 5});
             shader.setVec3 ("uViewPos",    camera.eye());
 
-            cube.draw();
+            // Draw every body
+            for (auto& body : world.bodies) {
+                Mat4 model = body->modelMatrix();
+                shader.setMat4("uModel", model.toGlm());
+                shader.setVec3("uColor", body->color.toGlm());
+                cubeMesh.draw(); // all shapes use cube mesh for now
+            }
 
             window.swapBuffers();
         }
