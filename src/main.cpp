@@ -6,40 +6,18 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
 
-// input state
+// camera and input state
 Camera camera;
-bool mouseDown = false;
-double lastX = 0.0, lastY = 0.0;
-
-void mouseBtnCB(GLFWwindow*, int btn, int action, int) {
-    if (btn == GLFW_MOUSE_BUTTON_LEFT) {
-        mouseDown = (action == GLFW_PRESS);
-        if (mouseDown) {
-            double x, y;
-            glfwGetCursorPos(glfwGetCurrentContext(), &x, &y);
-            lastX = x;
-            lastY = y;
-        }
-    }
-}
 
 void mouseMoveCB(GLFWwindow*, double x, double y) {
-    if (mouseDown) {
-        camera.orbit((float)(x - lastX), (float)(lastY - y));
-    }
-    lastX = x; lastY = y;
-}
-
-void scrollCB(GLFWwindow*, double, double dy) {
-    camera.zoom((float)dy);
+    camera.onMouseMove(x, y);
 }
 
 int main() {
     try {
         Window window(1280, 720, "fifi Engine");
-        glfwSetMouseButtonCallback(window.handle(), mouseBtnCB);
         glfwSetCursorPosCallback  (window.handle(), mouseMoveCB);
-        glfwSetScrollCallback     (window.handle(), scrollCB);
+        glfwSetInputMode(window.handle(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
         Shader shader("shaders/basic.vert", "shaders/basic.frag");
         Mesh   cubeMesh   = Mesh::createCube();
@@ -76,6 +54,9 @@ int main() {
         while (!window.shouldClose()) {
             window.pollEvents();
 
+            if (glfwGetKey(window.handle(), GLFW_KEY_ESCAPE) == GLFW_PRESS)
+                glfwSetWindowShouldClose(window.handle(), true);
+
             double now   = glfwGetTime();
             double dt    = std::min(now - lastTime, 0.1);
             lastTime     = now;
@@ -85,6 +66,8 @@ int main() {
                 world.step((float)FIXED_DT);
                 accumulator -= FIXED_DT;
             }
+
+            camera.update(window.handle(), (float)dt);
 
             int w, h;
             glfwGetFramebufferSize(window.handle(), &w, &h);
