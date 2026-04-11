@@ -98,7 +98,7 @@ public:
 
         rb.collider.type        = Collider::Type::Box;
         rb.collider.halfExtents = halfExtents;
-        
+
         return rb;
     }
 
@@ -161,6 +161,14 @@ public:
         orientation = orientation.integrateAngularVelocity(angularVelocity, dt);
         orientation.normalize();
 
+        const float LINEAR_SLEEP  = 0.01f;
+        const float ANGULAR_SLEEP = 0.01f;
+
+        if (linearVelocity.lengthSq()  < LINEAR_SLEEP  * LINEAR_SLEEP)
+            linearVelocity  = {};
+        if (angularVelocity.lengthSq() < ANGULAR_SLEEP * ANGULAR_SLEEP)
+            angularVelocity = {};
+
         clearAccumulators();
     }
 
@@ -180,8 +188,8 @@ public:
     bool isStatic() const { return invMass <= 0.0f; }
 
     // damping coefficients (0..1) / second
-    float linearDamping = 0.05f;
-    float angularDamping = 0.1f;
+    float linearDamping = 0.8f;
+    float angularDamping = 3.0f;
 
 private:
     Vec3 m_forceAccum;

@@ -45,16 +45,37 @@ int main() {
         float floorHalfHeight = 0.5f;
         world.groundY = -3.0f;
 
+        // floor
         auto* floor = world.addBody(RigidBody::createStatic(
             {0, world.groundY - floorHalfHeight, 0},
-            {6, floorHalfHeight, 6}));
+            {64, floorHalfHeight, 64}));
 
-        // a stack of objects
-        auto* b0 = world.addBody(RigidBody::createBox  (1.0f,{0.5f,0.5f,0.5f},{0,  4,  0}));
-        auto* b1 = world.addBody(RigidBody::createBox  (1.0f,{0.5f,0.5f,0.5f},{0,  6,  0}));
-        auto* sp = world.addBody(RigidBody::createSphere(1.5f, 0.6f,           {2,  5,  0}));
-        b0->angularVelocity = { 0.5f, 1.2f, 0.3f };
-        sp->color = { 1.0f, 0.5f, 0.3f };
+        // ramp
+        auto* ramp = world.addBody(RigidBody::createStatic({-2, world.groundY - 0.2f, 0}, {3, 0.2f, 2}));
+        ramp->orientation = Quaternion::fromAxisAngle({0, 0, 1}, 0.4f); // ~23 degrees
+        ramp->collider.halfExtents = {3, 0.2f, 2};
+
+        // Stack of boxes
+        for (int i = 0; i < 4; i++) {
+            auto* b = world.addBody(
+                RigidBody::createBox(1.0f, {0.5f, 0.5f, 0.5f},
+                                {0.0f, -1.0f + i * 1.1f, 0.0f}));
+            b->restitution = 0.2f;
+            b->friction    = 0.6f;
+        }
+
+        // Heavy ball rolling off the ramp
+        auto* ball = world.addBody(RigidBody::createSphere(3.0f, 0.6f, {-3.5f, 0.5f, 0}));
+        ball->color       = {1.0f, 0.4f, 0.2f};
+        ball->restitution = 0.5f;
+        ball->friction    = 0.4f;
+        ball->linearVelocity = {3.0f, 0, 0};
+
+        // Light bouncy ball
+        auto* bouncy = world.addBody(RigidBody::createSphere(0.5f, 0.4f, {2.0f, 4.0f, 0}));
+        bouncy->color       = {0.3f, 1.0f, 0.4f};
+        bouncy->restitution = 0.85f;  // very bouncy
+        bouncy->friction    = 0.1f;
 
         // fixed timestep
         const double FIXED_DT = 1.0 / 120.0; // 120 hz
@@ -147,13 +168,23 @@ int main() {
                         {aabb.max.x, aabb.max.y, aabb.max.z}, col);
                 }
 
-                // contact normals (red line from contact point along normal)
+                // contact points and normals (red = normal, orange = tangents)
                 for (auto& c : world.contacts) {
-                    glm::vec3 cp = { c.contactPoint.x,
-                                     c.contactPoint.y,
-                                     c.contactPoint.z };
-                    glm::vec3 cn = { c.normal.x, c.normal.y, c.normal.z };
-                    lines.addLine(cp, cp + cn * 0.5f, {1,0,0});
+                    glm::vec3 cp = { c.contactPoint.x, c.contactPoint.y, c.contactPoint.z };
+                    glm::vec3 cn = { c.normal.x,       c.normal.y,       c.normal.z       };
+
+                    // normal line scaled by penetration depth (longer = deeper penetration)
+                    float scale = 1.0f + c.penetrationDepth * 5.0f;
+                    lines.addLine(cp, cp + cn * scale, {1, 0, 0});     // red  = normal
+
+                    // tangent cross marker at contact point
+                    glm::vec3 perp = glm::abs(cn.y) < 0.9f
+                                ? glm::vec3{0,1,0} : glm::vec3{1,0,0};
+                    glm::vec3 t1 = glm::normalize(glm::cross(cn, perp)) * 0.15f;
+                    glm::vec3 t2 = glm::normalize(glm::cross(cn, t1))   * 0.15f;
+
+                    lines.addLine(cp - t1, cp + t1, {1, 0.5f, 0});     // orange = tangent X
+                    lines.addLine(cp - t2, cp + t2, {1, 0.5f, 0});     // orange = tangent Y
                 }
 
                 lineShader.bind();
@@ -169,12 +200,9 @@ int main() {
                 std::ostringstream ss;
                 ss << std::fixed << std::setprecision(2);
                 ss << "[" << i << "] "
-                   << "pos("  << b->position.x       << ","
-                               << b->position.y       << ","
-                               << b->position.z       << ") "
-                   << "vel("  << b->linearVelocity.x  << ","
-                               << b->linearVelocity.y  << ","
-                               << b->linearVelocity.z  << ") "
+                   << "pos("  << b->position.x      << "," << b->position.y      << "," << b->position.z      << ") "
+                   << "vel("  << b->linearVelocity.x << "," << b->linearVelocity.y << "," << b->linearVelocity.z << ") "
+                   << "ω("    << b->angularVelocity.x << "," << b->angularVelocity.y << "," << b->angularVelocity.z << ") "
                    << (b->isStatic() ? "[static]" : "");
                 bodyLines.push_back(ss.str());
             }

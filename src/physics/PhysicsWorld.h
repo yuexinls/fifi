@@ -3,6 +3,7 @@
 #include "Collision/BroadPhase.h"
 #include "Collision/GJK.h"
 #include "Collision/ContactManifold.h"
+#include "Collision/ContactResolver.h"
 #include <vector>
 #include <memory>
 
@@ -26,6 +27,7 @@ public:
         applyGravity();
         integrateBodies(dt);
         detectCollisions();
+        resolveAllContacts(contacts, dt, 12);
         resolveGroundPlane(); // replaced later
     }
 
@@ -56,10 +58,11 @@ private:
                 bj->collider, bj->position, bj->orientation,
                 m);
 
-            if (hit && m.valid()) {
+            if (hit) {
                 m.bodyA = bi.get();
                 m.bodyB = bj.get();
-                contacts.push_back(m);
+                if (m.penetrationDepth > 0.0f)
+                    contacts.push_back(m);
             }
         }
     }
@@ -86,6 +89,12 @@ private:
                 // simple friction on horizontal velocity
                 body->linearVelocity.x *= (1.0f - body->friction * 0.1f);
                 body->linearVelocity.z *= (1.0f - body->friction * 0.1f);
+
+                if (body->linearVelocity.lengthSq() < 0.1f) {
+                    body->angularVelocity *= 0.98f;
+                    if (body->angularVelocity.lengthSq() < 0.001f)
+                        body->angularVelocity = {};
+                }
             }
         }
     }

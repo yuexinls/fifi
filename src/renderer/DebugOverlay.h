@@ -39,6 +39,7 @@ public:
 
         glGenVertexArrays(1, &m_vao);
         glGenBuffers(1, &m_vbo);
+        glGenBuffers(1, &m_ebo);
         glBindVertexArray(m_vao);
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 
@@ -55,6 +56,7 @@ public:
     ~DebugOverlay() {
         glDeleteVertexArrays(1, &m_vao);
         glDeleteBuffers(1, &m_vbo);
+        glDeleteBuffers(1, &m_ebo);
         glDeleteProgram(m_shader);
     }
 
@@ -123,9 +125,7 @@ public:
             idx.insert(idx.end(), {b,b+1,b+2, b,b+2,b+3});
         }
 
-        GLuint ebo;
-        glGenBuffers(1, &ebo);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER,
                      idx.size()*sizeof(uint32_t),
                      idx.data(), GL_DYNAMIC_DRAW);
@@ -133,7 +133,6 @@ public:
         glDrawElements(GL_TRIANGLES, (GLsizei)idx.size(),
                        GL_UNSIGNED_INT, nullptr);
 
-        glDeleteBuffers(1, &ebo);
         glBindVertexArray(0);
 
         glDisable(GL_BLEND);
@@ -142,7 +141,7 @@ public:
 
 
 private:
-    GLuint m_shader, m_vao, m_vbo;
+    GLuint m_shader, m_vao, m_vbo, m_ebo;
 
     static std::string fmt(float v, int decimals) {
         char buf[32];
