@@ -5,6 +5,7 @@
 #include "renderer/LineRenderer.h"
 #include "renderer/DebugOverlay.h"
 #include "physics/PhysicsWorld.h"
+#include "physics/PhysicsWatchdog.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
 #include <sstream>
@@ -26,8 +27,9 @@ int main() {
         Window window(1280, 720, "fifi Engine");
 
         Camera camera;
-        DebugOverlay debugOverlay;
         g_camera = &camera;
+
+        DebugOverlay debugOverlay;
         g_debugOverlay = &debugOverlay;
 
         glfwSetCursorPosCallback(window.handle(), mouseMoveCB);
@@ -42,6 +44,7 @@ int main() {
 
         // build scene
         PhysicsWorld world;
+
         float floorHalfHeight = 0.5f;
         world.groundY = -3.0f;
 
@@ -103,7 +106,12 @@ int main() {
             camera.update(window.handle(), (float)dt);
 
             while (accumulator >= FIXED_DT) {
-                world.step((float)FIXED_DT);
+                world.applyGravity();
+                world.integrateBodies((float)FIXED_DT);
+                world.detectCollisions();
+                resolveAllContacts(world.contacts, (float)FIXED_DT);
+                world.resolveGroundPlane();
+                world.watchdog.analyse(world.bodies, world.contacts);
                 accumulator -= FIXED_DT;
             }
 
@@ -140,7 +148,6 @@ int main() {
                     case ShapeType::Box:    cubeMesh.draw();   break;
                 }
             }
-
             // debug overlay
             if (debugOverlay.visible) {
                 lines.begin();
@@ -198,15 +205,28 @@ int main() {
 
             // build text lines for each body
             std::vector<std::string> bodyLines;
+            auto& wdBodies = world.watchdog.report.bodies;
+
             for (int i = 0; i < (int)world.bodies.size(); i++) {
                 auto& b = world.bodies[i];
+
                 std::ostringstream ss;
                 ss << std::fixed << std::setprecision(2);
                 ss << "[" << i << "] "
-                   << "pos("  << b->position.x      << "," << b->position.y      << "," << b->position.z      << ") "
-                   << "vel("  << b->linearVelocity.x << "," << b->linearVelocity.y << "," << b->linearVelocity.z << ") "
-                   << "ω("    << b->angularVelocity.x << "," << b->angularVelocity.y << "," << b->angularVelocity.z << ") "
-                   << (b->isStatic() ? "[static]" : "");
+                << "pos(" << b->position.x << "," << b->position.y << "," << b->position.z << ") ";
+
+                // guard
+                if (i < (int)wdBodies.size()) {
+                    auto& wd = wdBodies[i];
+                    ss << "spd=" << wd.linearSpeed << " "
+                    << "wSpd=" << wd.angularSpeed;
+                    if (wd.speedWarning) ss << " [fast]";
+                    if (wd.nanWarning)   ss << " [NaN]";
+                } else {
+                    ss << "spd=-- wSpd=--";
+                }
+
+                if (b->isStatic()) ss << " [static]";
                 bodyLines.push_back(ss.str());
             }
 
@@ -215,6 +235,7 @@ int main() {
                               (int)world.bodies.size(),
                               (int)world.broadphasePairs.size(),
                               (int)world.contacts.size(),
+                              world.watchdog.report,
                               bodyLines);
 
             window.swapBuffers();

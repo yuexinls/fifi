@@ -1,4 +1,5 @@
 #pragma once
+#include "physics/PhysicsWatchdog.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -72,16 +73,56 @@ public:
               int bodyCount,
               int broadphasePairs,
               int contactCount,
+              const WatchdogReport& watchdog,
               const std::vector<std::string>& bodyLines)
     {
         if (!visible) return;
 
-        // build all the text lines
         std::vector<std::string> lines;
+
+        // performance stats
         lines.push_back("FPS:              " + fmt(fps, 1));
         lines.push_back("Bodies:           " + std::to_string(bodyCount));
         lines.push_back("Broadphase pairs: " + std::to_string(broadphasePairs));
         lines.push_back("Contacts:         " + std::to_string(contactCount));
+
+        // physics health
+        lines.push_back(" ");
+        lines.push_back("=== PHYSICS HEALTH ===");
+
+        std::string healthLine = "Status: ";
+        bool healthy = watchdog.totalSpeedWarnings   == 0
+                    && watchdog.totalNaNWarnings      == 0
+                    && watchdog.totalBadNormals       == 0
+                    && watchdog.totalDeepPenetrations == 0;
+        healthLine += healthy ? "OK" : "WARNINGS DETECTED";
+        lines.push_back(healthLine);
+
+        lines.push_back("Speed warnings:   " + std::to_string(watchdog.totalSpeedWarnings));
+        lines.push_back("NaN warnings:     " + std::to_string(watchdog.totalNaNWarnings));
+        lines.push_back("Bad normals:      " + std::to_string(watchdog.totalBadNormals));
+        lines.push_back("Deep contacts:    " + std::to_string(watchdog.totalDeepPenetrations));
+
+        // per contact details
+        if (!watchdog.contacts.empty()) {
+            lines.push_back(" ");
+            lines.push_back("=== CONTACTS ===");
+            for (auto& cd : watchdog.contacts) {
+                std::ostringstream ss;
+                ss << std::fixed << std::setprecision(3);
+                ss << "[" << cd.bodyAIndex << "x" << cd.bodyBIndex << "] "
+                << "pen=" << cd.penetration << " "
+                << "nLen=" << cd.normalLength << " "
+                << "pts=" << cd.pointCount;
+                if (cd.badNormal)       ss << " [BAD NORMAL]";
+                if (cd.deepPenetration) ss << " [DEEP]";
+                lines.push_back(ss.str());
+            }
+        }
+
+        // per body details
+        lines.push_back(" ");
+        lines.push_back("=== BODIES ===");
         for (auto& l : bodyLines) lines.push_back(l);
 
         // render background quad then text

@@ -5,6 +5,7 @@
 #include "Collision/ContactManifold.h"
 #include "Collision/ContactResolver.h"
 #include "Collision/ContactGenerator.h"
+#include "PhysicsWatchdog.h"
 #include <vector>
 #include <memory>
 
@@ -13,10 +14,9 @@ public:
     Vec3 gravity = {0, -9.81f, 0};
     float groundY = -2.0f; // simple infinite ground plane
 
+    PhysicsWatchdog watchdog;
     std::vector<std::unique_ptr<RigidBody>> bodies;
-
     std::vector<ContactManifold> contacts;
-
     std::vector<std::pair<int,int>> broadphasePairs;
 
     RigidBody* addBody(RigidBody rb) {
@@ -30,6 +30,7 @@ public:
         detectCollisions();
         resolveAllContacts(contacts, dt, 12);
         resolveGroundPlane(); // replaced later
+        watchdog.analyse(bodies, contacts);
     }
 
 private:

@@ -1,9 +1,12 @@
 #pragma once
 #include "ContactManifold.h"
 #include "physics/RigidBody.h"
+#include "core/DebugLog.h"
 #include <cmath>
 #include <algorithm>
 #include <vector>
+#include <sstream>
+#include <iomanip>
 
 // resolves only velocity
 inline void resolveContactVelocity(ContactManifold& contact) {
@@ -155,6 +158,17 @@ inline void resolveContactVelocityAtPoint(RigidBody* A, RigidBody* B,
     float j = -(1.0f + e) * vRelN / denom;
     j = std::max(j, 0.0f);
     j *= scale;
+
+    // log large impulses
+    if (j > WARN_IMPULSE) {
+        std::ostringstream ss;
+        ss << std::fixed << std::setprecision(3);
+        ss << "Large impulse j=" << j
+        << " vRelN=" << vRelN
+        << " denom=" << denom
+        << " scale=" << scale;
+        DWARN("large_impulse", ss.str());
+    }
 
     Vec3 impulse = n * j;
 

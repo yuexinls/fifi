@@ -400,7 +400,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src\core\Window.cpp" />
     <ClCompile Include="C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src\main.cpp" />
   </ItemGroup>
   <ItemGroup />
