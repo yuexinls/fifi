@@ -87,6 +87,9 @@ static bool triangleCase(Simplex& s, Vec3& dir) {
 
     Vec3 ABC = AB.cross(AC); // triangle normal
 
+    if (!sameDir(ABC, AO))
+        ABC = -ABC; // ensure ABC points towards the origin
+
     if (sameDir(ABC.cross(AC), AO)) {
         if (sameDir(AC, AO)) {
             s.pts[1] = s.pts[2]; // keep A,C
@@ -121,6 +124,10 @@ static bool tetrahedronCase(Simplex& s, Vec3& dir) {
     Vec3 ABC = AB.cross(AC);
     Vec3 ACD = AC.cross(AD);
     Vec3 ADB = AD.cross(AB);
+
+    if (!sameDir(ABC, AD)) ABC = -ABC;
+    if (!sameDir(ACD, AB)) ACD = -ACD;
+    if (!sameDir(ADB, AC)) ADB = -ADB;
 
     if (sameDir(ABC, AO)) {
         s.size = 3;
@@ -168,7 +175,11 @@ static EPAFace makeFace(const std::vector<GJKSupport>& pts,
     Vec3 b = pts[i1].point;
     Vec3 c = pts[i2].point;
 
-    Vec3  n   = (b - a).cross(c - a).normalized();
+    Vec3 n = (b - a).cross(c - a);
+    float lenSq = n.lengthSq();
+    if (lenSq < 1e-10f) return {}; // skip bad face
+    n /= std::sqrt(lenSq);
+
     float d   = n.dot(a);
 
     if (d < 0) { n = -n; d = -d; }
@@ -213,7 +224,7 @@ static ContactManifold EPA(
 
         float newDist = closest.normal.dot(sup.point);
 
-        if (std::abs(newDist - minDist) < TOLERANCE) {
+        if (std::abs(newDist - minDist) < TOLERANCE * std::max(1.0f, minDist)) {
             // convergence - return contact manifold
             ContactManifold m;
             m.normal           = closest.normal;
@@ -281,11 +292,12 @@ inline bool GJKIntersect(
 
     const int MAX_ITER = 64;
     for (int i = 0; i < MAX_ITER; i++) {
-        if (dir.lengthSq() < 1e-10f) break;
+        if (dir.lengthSq() < 1e-10f)
+            return true;
 
         GJKSupport sup = minkowskiSupport(A, posA, rotA, B, posB, rotB, dir);
 
-        if (sup.point.dot(dir) < 0.0f)
+        if ((sup.point - s.a().point).lengthSq() < 1e-10f)
             return false; // no intersection
 
         s.push(sup);
