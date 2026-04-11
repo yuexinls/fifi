@@ -1,17 +1,32 @@
 #pragma once
 #include "math/Vec3.h"
+#include <vector>
 
-struct RigidBody; // forward declaration
+struct RigidBody;
+
+struct ContactPoint {
+    Vec3  position;
+    float penetrationDepth;
+};
 
 struct ContactManifold {
     RigidBody* bodyA = nullptr;
     RigidBody* bodyB = nullptr;
 
-    Vec3 normal;            // from B to A
-    float penetrationDepth = 0.0f;
-    Vec3 contactPoint;      // in world space
+    Vec3 normal;
 
-    bool valid() const { return bodyA && bodyB && penetrationDepth > 1e-5f && normal.lengthSq() > 1e-6f; }
+    // multiple contact points for box-box collisions
+    std::vector<ContactPoint> contacts;
+
+    // convenience fields for resolution
+    Vec3  contactPoint     = {};
+    float penetrationDepth = 0.0f;
+
+    bool valid() const {
+        return bodyA && bodyB
+            && penetrationDepth > 0.0f
+            && normal.lengthSq() > 0.5f;
+    }
 };
 
 
