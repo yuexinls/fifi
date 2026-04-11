@@ -23,6 +23,7 @@ target_include_directories(fifi PRIVATE
     third_party/glad/include
     third_party/glfw/include
     third_party/glm
+    third_party/stb_easy_font.h
 )
 
 target_link_libraries(fifi PRIVATE glfw glad glm)
