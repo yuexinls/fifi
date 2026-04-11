@@ -5,25 +5,24 @@
 #include <algorithm>
 #include <cmath>
 
-// clip a polygon by a plane, returns the portion in front of the plane (Sutherland-Hodgman step)
-static std::vector<Vec3> clipByPlane(const std::vector<Vec3>& poly,
-                                     const Vec3& planeNormal,
-                                     float planeDist)
+// clip polygon by plane defined by normal n and distance d from origin
+static std::vector<Vec3> clipPolygonByPlane(
+    const std::vector<Vec3>& poly,
+    const Vec3& n, float d)
 {
     std::vector<Vec3> out;
     if (poly.empty()) return out;
 
-    for (int i = 0; i < (int)poly.size(); i++) {
+    int count = (int)poly.size();
+    for (int i = 0; i < count; i++) {
         const Vec3& curr = poly[i];
-        const Vec3& next = poly[(i + 1) % poly.size()];
+        const Vec3& next = poly[(i + 1) % count];
 
-        float dCurr = planeNormal.dot(curr) - planeDist;
-        float dNext = planeNormal.dot(next) - planeDist;
+        float dCurr = n.dot(curr) - d;
+        float dNext = n.dot(next) - d;
 
-        if (dCurr >= 0.0f) out.push_back(curr);
-
-        // edge intersects plane
-        if ((dCurr >= 0.0f) != (dNext >= 0.0f)) {
+        if (dCurr <= 0.0f) out.push_back(curr); // inside
+        if ((dCurr < 0.0f) != (dNext < 0.0f)) { // edge crosses
             float t = dCurr / (dCurr - dNext);
             out.push_back(curr + (next - curr) * t);
         }
@@ -31,15 +30,14 @@ static std::vector<Vec3> clipByPlane(const std::vector<Vec3>& poly,
     return out;
 }
 
-// generate a contact manifold for box-box pairs using clipping
-inline void generateBoxContacts(ContactManifold& manifold,
+inline void generateBoxContacts(ContactManifold& m,
                                  const RigidBody& A,
                                  const RigidBody& B)
 {
-    Vec3 n = manifold.normal; // points from B toward A
+    const Vec3& n = m.normal; // points from B toward A
 
-    // find reference face on A (most aligned with n) and incident face on B (most anti-aligned with n)
-    Vec3 axes[3] = {
+    // find the reference face on A (the one most aligned with the contact normal)
+    Vec3 axesA[3] = {
         A.orientation.rotate({1,0,0}),
         A.orientation.rotate({0,1,0}),
         A.orientation.rotate({0,0,1})
@@ -50,23 +48,27 @@ inline void generateBoxContacts(ContactManifold& manifold,
         A.collider.halfExtents.z
     };
 
-    int refAxis   = 0;
+    int   refAxis = 0;
     float bestDot = -1.0f;
     for (int i = 0; i < 3; i++) {
-        float d = std::abs(axes[i].dot(n));
+        float d = std::abs(axesA[i].dot(n));
         if (d > bestDot) { bestDot = d; refAxis = i; }
     }
 
-    Vec3 refNormal = axes[refAxis].dot(n) > 0 ? axes[refAxis] : -axes[refAxis];
-    Vec3 refCenter = A.position + refNormal * halfA[refAxis];
+    // reference face normal should point toward B
+    bool  refFlip   = axesA[refAxis].dot(n) < 0.0f;
+    Vec3  refNormal = refFlip ? -axesA[refAxis] : axesA[refAxis];
+    Vec3  refCenter = A.position + refNormal * halfA[refAxis];
 
-    // reference face basis
-    Vec3 t1 = axes[(refAxis + 1) % 3];
-    Vec3 t2 = axes[(refAxis + 2) % 3];
-    float h1 = halfA[(refAxis + 1) % 3];
-    float h2 = halfA[(refAxis + 2) % 3];
+    // tangent axes for clipping planes
+    int   ti1  = (refAxis + 1) % 3;
+    int   ti2  = (refAxis + 2) % 3;
+    Vec3  t1   = axesA[ti1];
+    Vec3  t2   = axesA[ti2];
+    float h1   = halfA[ti1];
+    float h2   = halfA[ti2];
 
-    // find incident face on B (most anti-aligned with n)
+    // find the incident face on B (the one most anti-aligned with the contact normal)
     Vec3 axesB[3] = {
         B.orientation.rotate({1,0,0}),
         B.orientation.rotate({0,1,0}),
@@ -78,22 +80,25 @@ inline void generateBoxContacts(ContactManifold& manifold,
         B.collider.halfExtents.z
     };
 
-    int incAxis   = 0;
-    float worstDot = 1.0f;
+    int   incAxis  = 0;
+    float mostNeg  = 1.0f;
     for (int i = 0; i < 3; i++) {
         float d = axesB[i].dot(n);
-        if (d < worstDot) { worstDot = d; incAxis = i; }
+        if (d < mostNeg) { mostNeg = d; incAxis = i; }
     }
 
-    Vec3 incNormal = axesB[incAxis].dot(n) < 0 ? axesB[incAxis] : -axesB[incAxis];
-    Vec3 incCenter = B.position + incNormal * halfB[incAxis];
+    bool  incFlip   = axesB[incAxis].dot(n) > 0.0f;
+    Vec3  incNormal = incFlip ? -axesB[incAxis] : axesB[incAxis];
+    Vec3  incCenter = B.position + incNormal * halfB[incAxis];
 
-    Vec3 it1 = axesB[(incAxis + 1) % 3];
-    Vec3 it2 = axesB[(incAxis + 2) % 3];
-    float ih1 = halfB[(incAxis + 1) % 3];
-    float ih2 = halfB[(incAxis + 2) % 3];
+    int   ii1  = (incAxis + 1) % 3;
+    int   ii2  = (incAxis + 2) % 3;
+    Vec3  it1  = axesB[ii1];
+    Vec3  it2  = axesB[ii2];
+    float ih1  = halfB[ii1];
+    float ih2  = halfB[ii2];
 
-    // incident face polygon (4 corners)
+    // build incident face as a box centered on incCenter, with axes it1/it2 and extents ih1/ih2
     std::vector<Vec3> poly = {
         incCenter + it1*ih1 + it2*ih2,
         incCenter - it1*ih1 + it2*ih2,
@@ -101,66 +106,78 @@ inline void generateBoxContacts(ContactManifold& manifold,
         incCenter + it1*ih1 - it2*ih2
     };
 
-    // clip against the 4 side planes of the reference face (defined by t1,t2,h1,h2)
-    struct Plane { Vec3 n; float d; };
-    Plane sidePlanes[4] = {
-        {  t1,  t1.dot(refCenter) + h1 },
-        { -t1, -t1.dot(refCenter) + h1 },
-        {  t2,  t2.dot(refCenter) + h2 },
-        { -t2, -t2.dot(refCenter) + h2 }
-    };
+    // clip incident face against the 4 planes of the reference face (t1/t2 with h1/h2)
+    poly = clipPolygonByPlane(poly,  t1,  t1.dot(refCenter) + h1);
+    if (poly.empty()) return;
+    poly = clipPolygonByPlane(poly, -t1, -t1.dot(refCenter) + h1);
+    if (poly.empty()) return;
+    poly = clipPolygonByPlane(poly,  t2,  t2.dot(refCenter) + h2);
+    if (poly.empty()) return;
+    poly = clipPolygonByPlane(poly, -t2, -t2.dot(refCenter) + h2);
+    if (poly.empty()) return;
 
-    for (auto& plane : sidePlanes) {
-        poly = clipByPlane(poly, plane.n, plane.d);
-        if (poly.empty()) return;
-    }
-
-    // keep only points behind the reference face, and build contact points
+    // keep only points that are behind the reference face (penetrating)
     float refD = refNormal.dot(refCenter);
-    manifold.contacts.clear();
+
+    m.contacts.clear();
 
     for (auto& p : poly) {
         float depth = refD - refNormal.dot(p);
-        if (depth >= -0.01f) {
-            Vec3 projected = p + refNormal * std::max(depth, 0.0f);
+        if (depth > -0.005f) { // small tolerance
             ContactPoint cp;
-            cp.position         = projected;
+            cp.position         = p + refNormal * std::max(depth, 0.0f);
             cp.penetrationDepth = std::max(depth, 0.0f);
-            manifold.contacts.push_back(cp);
+            m.contacts.push_back(cp);
         }
     }
 
-    // update manifold contact point and penetration depth as average of contacts for resolution
-    if (!manifold.contacts.empty()) {
-        Vec3  avgPos   = {};
-        float maxDepth = 0.0f;
-        for (auto& cp : manifold.contacts) {
-            avgPos   += cp.position;
-            maxDepth  = std::max(maxDepth, cp.penetrationDepth);
-        }
-        manifold.contactPoint     = avgPos * (1.0f / manifold.contacts.size());
-        manifold.penetrationDepth = maxDepth;
+    // reduce to max 4 contact points by depth
+    if (m.contacts.size() > 4) {
+        std::sort(m.contacts.begin(), m.contacts.end(),
+            [](const ContactPoint& a, const ContactPoint& b){
+                return a.penetrationDepth > b.penetrationDepth;
+            });
+        m.contacts.resize(4);
     }
+
+    // update manifold contact point and penetration depth as the average of the contact points
+    if (m.contacts.empty()) return;
+
+    Vec3  avgPos   = {};
+    float maxDepth = 0.0f;
+    for (auto& cp : m.contacts) {
+        avgPos   += cp.position;
+        maxDepth  = std::max(maxDepth, cp.penetrationDepth);
+    }
+    m.contactPoint     = avgPos * (1.0f / (float)m.contacts.size());
+    m.penetrationDepth = maxDepth;
 }
 
-// called after GJK & EPA to add multiple contact points for box-box pairs
 inline void enrichManifold(ContactManifold& m,
                             const RigidBody& A,
                             const RigidBody& B)
 {
+    // always start with EPA
+    ContactPoint epaCp;
+    epaCp.position         = m.contactPoint;
+    epaCp.penetrationDepth = m.penetrationDepth;
+    m.contacts             = { epaCp };
+
     bool aBox = (A.collider.type == Collider::Type::Box);
     bool bBox = (B.collider.type == Collider::Type::Box);
 
     if (aBox && bBox) {
+        // try full clipping-based contact generation
+        std::vector<ContactPoint> backup = m.contacts;
         generateBoxContacts(m, A, B);
-        return;
-    }
 
-    // for sphere contacts, just use the single contact point from EPA
-    ContactPoint cp;
-    cp.position         = m.contactPoint;
-    cp.penetrationDepth = m.penetrationDepth;
-    m.contacts          = { cp };
+        // safety check
+        if (m.contacts.empty() || m.penetrationDepth > 2.0f) {
+            m.contacts         = backup;
+            m.contactPoint     = epaCp.position;
+            m.penetrationDepth = epaCp.penetrationDepth;
+        }
+    }
 }
 
 

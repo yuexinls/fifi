@@ -126,7 +126,8 @@ inline void resolveContactPosition(ContactManifold& contact) {
 
 inline void resolveContactVelocityAtPoint(RigidBody* A, RigidBody* B,
                                            const Vec3& cp, const Vec3& n,
-                                           float penetration)
+                                           float penetration,
+                                           float scale = 1.0f)
 {
     if (!A || !B) return;
 
@@ -153,6 +154,7 @@ inline void resolveContactVelocityAtPoint(RigidBody* A, RigidBody* B,
     // scale impulse by penetration depth for better stacking stability
     float j = -(1.0f + e) * vRelN / denom;
     j = std::max(j, 0.0f);
+    j *= scale;
 
     Vec3 impulse = n * j;
 
@@ -184,6 +186,7 @@ inline void resolveContactVelocityAtPoint(RigidBody* A, RigidBody* B,
 
     float mu    = (A->friction + B->friction) * 0.5f;
     float jFric = -vtLen / denomFric;
+    jFric *= scale;
 
     Vec3 frictionImpulse = (std::abs(jFric) <= j * mu)
         ? tangent * jFric
@@ -207,17 +210,20 @@ inline void resolveAllContacts(std::vector<ContactManifold>& contacts,
     for (int iter = 0; iter < iterations; iter++) {
         for (auto& c : contacts) {
             if (!c.valid()) continue;
-            Vec3 n = c.normal;
+
+            // each contact manifold may have multiple contact points
+            float pointScale = 1.0f / (float)c.contacts.size();
+
             for (auto& cp : c.contacts) {
                 resolveContactVelocityAtPoint(
                     c.bodyA, c.bodyB,
-                    cp.position, n,
-                    cp.penetrationDepth);
+                    cp.position, c.normal,
+                    cp.penetrationDepth,
+                    pointScale);
             }
         }
     }
 
-    // positional correction after velocity resolution to prevent sinking and jitter
     for (auto& c : contacts) {
         if (!c.valid()) continue;
         resolveContactPosition(c);

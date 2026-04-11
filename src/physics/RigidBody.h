@@ -163,11 +163,20 @@ public:
 
         const float LINEAR_SLEEP  = 0.01f;
         const float ANGULAR_SLEEP = 0.01f;
-
+        
         if (linearVelocity.lengthSq()  < LINEAR_SLEEP  * LINEAR_SLEEP)
             linearVelocity  = {};
         if (angularVelocity.lengthSq() < ANGULAR_SLEEP * ANGULAR_SLEEP)
             angularVelocity = {};
+
+        const float MAX_LINEAR_VELOCITY  = 50.0f;
+        const float MAX_ANGULAR_VELOCITY = 50.0f;
+
+        if (linearVelocity.lengthSq() > MAX_LINEAR_VELOCITY * MAX_LINEAR_VELOCITY)
+            linearVelocity = linearVelocity.normalized() * MAX_LINEAR_VELOCITY;
+
+        if (angularVelocity.lengthSq() > MAX_ANGULAR_VELOCITY * MAX_ANGULAR_VELOCITY)
+            angularVelocity = angularVelocity.normalized() * MAX_ANGULAR_VELOCITY;
 
         clearAccumulators();
     }

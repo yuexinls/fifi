@@ -51,31 +51,33 @@ int main() {
             {64, floorHalfHeight, 64}));
 
         // ramp
-        auto* ramp = world.addBody(RigidBody::createStatic({-2, world.groundY - 0.2f, 0}, {3, 0.2f, 2}));
-        ramp->orientation = Quaternion::fromAxisAngle({0, 0, 1}, 0.4f); // ~23 degrees
-        ramp->collider.halfExtents = {3, 0.2f, 2};
+        auto* ramp = world.addBody(RigidBody::createStatic({3, -1.5f, 0}, {3, 0.2f, 2}));
+        ramp->orientation           = Quaternion::fromAxisAngle({0,0,1}, 0.35f);
+        ramp->collider.halfExtents  = {3, 0.2f, 2};
 
-        // Stack of boxes
+        // stack of four boxes
         for (int i = 0; i < 4; i++) {
             auto* b = world.addBody(
                 RigidBody::createBox(1.0f, {0.5f, 0.5f, 0.5f},
-                                {0.0f, -1.0f + i * 1.1f, 0.0f}));
-            b->restitution = 0.2f;
-            b->friction    = 0.6f;
+                                    {-3.0f, -2.5f + i * 1.2f, 0.0f}));
+            b->restitution = 0.1f;
+            b->friction    = 0.7f;
         }
 
-        // Heavy ball rolling off the ramp
-        auto* ball = world.addBody(RigidBody::createSphere(3.0f, 0.6f, {-3.5f, 0.5f, 0}));
-        ball->color       = {1.0f, 0.4f, 0.2f};
-        ball->restitution = 0.5f;
-        ball->friction    = 0.4f;
-        ball->linearVelocity = {3.0f, 0, 0};
+        // heavy ball
+        auto* ball = world.addBody(RigidBody::createSphere(3.0f, 0.6f, {6.0f, 1.0f, 0}));
+        ball->color          = {1.0f, 0.4f, 0.2f};
+        ball->restitution    = 0.3f;
+        ball->friction       = 0.5f;
+        ball->linearVelocity = {-4.0f, 0, 0};
 
-        // Light bouncy ball
-        auto* bouncy = world.addBody(RigidBody::createSphere(0.5f, 0.4f, {2.0f, 4.0f, 0}));
+        // bouncy ball 🤑
+        auto* bouncy = world.addBody(RigidBody::createSphere(0.5f, 0.4f, {0.0f, 4.0f, 0}));
         bouncy->color       = {0.3f, 1.0f, 0.4f};
-        bouncy->restitution = 0.85f;  // very bouncy
-        bouncy->friction    = 0.1f;
+        bouncy->restitution = 0.8f;
+        bouncy->friction    = 0.2f;
+
+        // i love balls
 
         // fixed timestep
         const double FIXED_DT = 1.0 / 120.0; // 120 hz
@@ -129,7 +131,7 @@ int main() {
             shader.setVec3 ("uLightPos",   {5, 10, 5});
             shader.setVec3 ("uViewPos",    camera.eye());
 
-            // Draw every body
+            // draw every body
             for (auto& body : world.bodies) {
                 shader.setMat4("uModel", body->modelMatrix().toGlm());
                 shader.setVec3("uColor", body->color.toGlm());
@@ -144,7 +146,8 @@ int main() {
                 lines.begin();
 
                 // AABB for each body
-                // (green = clear, yellow = broadphase candidate)
+                // green  = clear
+                // yellow = broadphase candidate
                 std::vector<bool> inBroadphase(world.bodies.size(), false);
                 for (auto& [i,j] : world.broadphasePairs) {
                     inBroadphase[i] = inBroadphase[j] = true;
@@ -156,11 +159,11 @@ int main() {
 
                     glm::vec3 col;
                     if (b->isStatic()) {
-                        col = { 0.3f, 0.3f, 1.0f };        // blue  = static body
+                        col = { 0.3f, 0.3f, 1.0f };     // blue   = static body
                     } else if (inBroadphase[i]) {
-                        col = { 1.0f, 1.0f, 0.0f };        // yellow = broadphase candidate
+                        col = { 1.0f, 1.0f, 0.0f };     // yellow = broadphase candidate
                     } else {
-                        col = { 0.0f, 1.0f, 0.0f };        // green  = clear
+                        col = { 0.0f, 1.0f, 0.0f };     // green  = clear
                     }
 
                     lines.addAABB(
@@ -175,7 +178,7 @@ int main() {
 
                     // normal line scaled by penetration depth (longer = deeper penetration)
                     float scale = 1.0f + c.penetrationDepth * 5.0f;
-                    lines.addLine(cp, cp + cn * scale, {1, 0, 0});     // red  = normal
+                    lines.addLine(cp, cp + cn * scale, {1, 0, 0});     // red = normal
 
                     // tangent cross marker at contact point
                     glm::vec3 perp = glm::abs(cn.y) < 0.9f

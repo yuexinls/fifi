@@ -50,6 +50,9 @@ private:
         broadphasePairs = broadphase(bodies);
 
         for (auto& [i, j] : broadphasePairs) {
+            // floor plane is handled separately so ig we can skip it here
+            if (i == 0 || j == 0) continue;
+
             auto& bi = bodies[i];
             auto& bj = bodies[j];
 
@@ -59,16 +62,19 @@ private:
                 bj->collider, bj->position, bj->orientation,
                 m);
 
-            if (hit) {
-                m.bodyA = bodies[i].get();
-                m.bodyB = bodies[j].get();
+            if (!hit) continue;
 
-                // enrich the manifold with multiple contact points for box-box pairs
-                enrichManifold(m, *bodies[i], *bodies[j]);
+            if (m.penetrationDepth <= 0.0f
+            || m.penetrationDepth >  5.0f
+            || m.normal.lengthSq() < 0.9f)
+                continue;
 
-                if (m.valid())
-                    contacts.push_back(m);
-            }
+            m.bodyA = bi.get();
+            m.bodyB = bj.get();
+            enrichManifold(m, *bi, *bj);
+
+            if (m.valid())
+                contacts.push_back(m);
         }
     }
 
