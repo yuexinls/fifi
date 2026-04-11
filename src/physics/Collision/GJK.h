@@ -229,6 +229,8 @@ static ContactManifold EPA(
             ContactManifold m;
             m.normal           = closest.normal;
             m.penetrationDepth = closest.distance;
+            if ((posA - posB).dot(m.normal) < 0)
+                m.normal = -m.normal; // ensure normal points from B to A
 
             // approximate contact point as the average of the triangle vertices projected onto the face normal
             Vec3 pA = (pts[closest.i0].pointA +

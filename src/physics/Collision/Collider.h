@@ -53,11 +53,19 @@ struct Collider {
                  const Quaternion& rot) const
     {
         if (type == Type::Sphere) {
-            return pos + d.normalized() * radius;
+            Vec3 dir = d;
+            if (dir.lengthSq() < 1e-10f)
+                dir = {1,0,0}; // arbitrary direction if d is zero
+
+            return pos + dir.normalized() * radius;
         }
 
         // for a box, find the corner in the direction of d
-        Vec3 localDir = rot.conjugate().rotate(d);
+        Vec3 dir = d;
+        if (dir.lengthSq() < 1e-10f)
+            dir = {1,0,0}; // again
+
+        Vec3 localDir = rot.conjugate().rotate(dir);
         Vec3 corner = {
             (localDir.x >= 0 ? halfExtents.x : -halfExtents.x),
             (localDir.y >= 0 ? halfExtents.y : -halfExtents.y),

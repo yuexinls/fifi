@@ -2,6 +2,7 @@
 #include "Collider.h"
 #include <vector>
 #include <utility>
+#include <memory>
 #include "RigidBody.h"
 
 // returns all pairs of body indices whose AABBs overlap
@@ -13,22 +14,20 @@ inline std::vector<std::pair<int,int>> broadphase(
     const std::vector<std::unique_ptr<RigidBody>>& bodies)
 {
     std::vector<std::pair<int,int>> pairs;
+    pairs.reserve(bodies.size());
 
-    for (int i = 0; i < (int)bodies.size(); i++) {
-        auto& bi = bodies[i];
-        Collider::AABB aabbI = bi->collider.computeAABB(
-            bi->position, bi->orientation);
+    std::vector<Collider::AABB> aabbs(bodies.size());
+    for (size_t i = 0; i < bodies.size(); i++) {
+        aabbs[i] = bodies[i]->collider.computeAABB(
+            bodies[i]->position, bodies[i]->orientation);
+    }
 
-        for (int j = i + 1; j < (int)bodies.size(); j++) {
-            auto& bj = bodies[j];
+    for (size_t i = 0; i < bodies.size(); i++) {
+        for (size_t j = i + 1; j < bodies.size(); j++) {
+            if (bodies[i]->isStatic() && bodies[j]->isStatic()) continue;
 
-            if (bi->isStatic() && bj->isStatic()) continue;
-
-            Collider::AABB aabbJ = bj->collider.computeAABB(
-                bj->position, bj->orientation);
-
-            if (aabbI.overlaps(aabbJ))
-                pairs.push_back({ i, j });
+            if (aabbs[i].overlaps(aabbs[j]))
+                pairs.emplace_back((int)i, (int)j);
         }
     }
 
