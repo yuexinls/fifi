@@ -65,6 +65,8 @@ private:
 
             if (!hit) continue;
 
+            m.penetrationDepth = std::min(m.penetrationDepth, 0.2f);
+
             if (m.penetrationDepth <= 0.0f
             || m.penetrationDepth >  5.0f
             || m.normal.lengthSq() < 0.9f)

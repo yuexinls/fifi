@@ -112,7 +112,8 @@ inline void resolveContactPosition(ContactManifold& contact) {
     if (A->isStatic() && B->isStatic()) return;
 
     const float SLOP      = 0.02f;
-    const float BAUMGARTE = 0.3f;
+    const float BAUMGARTE = 0.11111115f;
+    const float MAX_CORRECTION = 0.02f;
 
     float penetration = contact.penetrationDepth - SLOP;
     if (penetration <= 0.0f) return;
@@ -120,8 +121,11 @@ inline void resolveContactPosition(ContactManifold& contact) {
     float totalInvMass = A->invMass + B->invMass;
     if (totalInvMass < 1e-10f) return;
 
-    Vec3 correction = contact.normal
-                    * (penetration * BAUMGARTE / totalInvMass);
+    float correctionMag = std::min(
+        penetration * BAUMGARTE / totalInvMass,
+        MAX_CORRECTION);
+
+    Vec3 correction = contact.normal * correctionMag;
 
     if (!A->isStatic()) A->position += correction * A->invMass;
     if (!B->isStatic()) B->position -= correction * B->invMass;

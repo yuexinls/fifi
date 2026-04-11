@@ -106,12 +106,7 @@ int main() {
             camera.update(window.handle(), (float)dt);
 
             while (accumulator >= FIXED_DT) {
-                world.applyGravity();
-                world.integrateBodies((float)FIXED_DT);
-                world.detectCollisions();
-                resolveAllContacts(world.contacts, (float)FIXED_DT);
-                world.resolveGroundPlane();
-                world.watchdog.analyse(world.bodies, world.contacts);
+                world.step((float)FIXED_DT);
                 accumulator -= FIXED_DT;
             }
 
