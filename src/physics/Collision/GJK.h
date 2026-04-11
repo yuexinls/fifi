@@ -69,7 +69,10 @@ static bool lineCase(Simplex& s, Vec3& dir) {
     Vec3 AO = -s.a().point;
 
     if (sameDir(AB, AO)) {
-        dir = tripleProduct(AB, AO, AB);
+        Vec3 newDir = tripleProduct(AB, AO, AB);
+        if (newDir.lengthSq() < 1e-10f)
+            newDir = AB.cross({1,0,0}).lengthSq() > 1e-6f ? AB.cross({1,0,0}) : AB.cross({0,1,0});
+        dir = newDir;
     } else {
         s.size = 1;
         dir = AO;
