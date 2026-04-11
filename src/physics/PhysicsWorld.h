@@ -4,6 +4,7 @@
 #include "Collision/GJK.h"
 #include "Collision/ContactManifold.h"
 #include "Collision/ContactResolver.h"
+#include "Collision/ContactGenerator.h"
 #include <vector>
 #include <memory>
 
@@ -59,9 +60,13 @@ private:
                 m);
 
             if (hit) {
-                m.bodyA = bi.get();
-                m.bodyB = bj.get();
-                if (m.penetrationDepth > 0.0f)
+                m.bodyA = bodies[i].get();
+                m.bodyB = bodies[j].get();
+
+                // enrich the manifold with multiple contact points for box-box pairs
+                enrichManifold(m, *bodies[i], *bodies[j]);
+
+                if (m.valid())
                     contacts.push_back(m);
             }
         }
