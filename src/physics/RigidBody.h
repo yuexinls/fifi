@@ -2,6 +2,7 @@
 #include "math/Vec3.h"
 #include "math/Mat4.h"
 #include "math/Quaternion.h"
+#include "Collision/Collider.h"
 
 enum class ShapeType {
     Box,
@@ -31,6 +32,8 @@ public:
     Vec3 scale = { 1.0f, 1.0f, 1.0f }; // visual only
     ShapeType shape = ShapeType::Box;
 
+    Collider collider;
+
     // constructor helpers
     static RigidBody createBox(float m,
                                const Vec3& halfExtents,
@@ -42,6 +45,9 @@ public:
         rb.invMass  = (m > 0.0f) ? 1.0f / m : 0.0f;
         rb.scale    = halfExtents * 2.0f;
         rb.shape    = ShapeType::Box;
+
+        rb.collider.type        = Collider::Type::Box;
+        rb.collider.halfExtents = halfExtents;
 
         // I = (1/12) * m * (h² + d²) for each axis
         float wx = halfExtents.x * 2.0f;
@@ -67,6 +73,9 @@ public:
         rb.scale    = { radius*2, radius*2, radius*2 };
         rb.shape    = ShapeType::Sphere;
 
+        rb.collider.type   = Collider::Type::Sphere;
+        rb.collider.radius = radius;
+
         // I = (2/5) * m * r² for a solid sphere
         float i = (2.0f/5.0f) * m * radius * radius;
         float inv = (i > 0) ? 1.0f / i : 0.0f;
@@ -86,6 +95,10 @@ public:
         rb.scale    = halfExtents * 2.0f;
         rb.color    = {0.5f, 0.5f, 0.5f};
         rb.shape    = ShapeType::Box;
+
+        rb.collider.type        = Collider::Type::Box;
+        rb.collider.halfExtents = halfExtents;
+        
         return rb;
     }
 

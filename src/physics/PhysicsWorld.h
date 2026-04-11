@@ -1,5 +1,8 @@
 #pragma once
 #include "RigidBody.h"
+#include "Collision/BroadPhase.h"
+#include "Collision/GJK.h"
+#include "Collision/ContactManifold.h"
 #include <vector>
 #include <memory>
 
@@ -10,6 +13,10 @@ public:
 
     std::vector<std::unique_ptr<RigidBody>> bodies;
 
+    std::vector<ContactManifold> contacts;
+
+    std::vector<std::pair<int,int>> broadphasePairs;
+
     RigidBody* addBody(RigidBody rb) {
         bodies.push_back(std::make_unique<RigidBody>(std::move(rb)));
         return bodies.back().get();
@@ -18,6 +25,7 @@ public:
     void step(float dt) {
         applyGravity();
         integrateBodies(dt);
+        detectCollisions();
         resolveGroundPlane(); // replaced later
     }
 
@@ -32,6 +40,28 @@ private:
     void integrateBodies(float dt) {
         for (auto& body : bodies)
             body->integrate(dt);
+    }
+
+    void detectCollisions() {
+        contacts.clear();
+        broadphasePairs = broadphase(bodies);
+
+        for (auto& [i, j] : broadphasePairs) {
+            auto& bi = bodies[i];
+            auto& bj = bodies[j];
+
+            ContactManifold m;
+            bool hit = GJKIntersect(
+                bi->collider, bi->position, bi->orientation,
+                bj->collider, bj->position, bj->orientation,
+                m);
+
+            if (hit && m.valid()) {
+                m.bodyA = bi.get();
+                m.bodyB = bj.get();
+                contacts.push_back(m);
+            }
+        }
     }
 
     // temporary collision response with the ground plane 

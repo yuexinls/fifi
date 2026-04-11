@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -108,10 +108,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -150,7 +150,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -173,10 +173,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -215,7 +215,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -238,10 +238,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -280,7 +280,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -302,10 +302,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\notme\OneDrive\Documents\Code Projects\fifi\src;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glad\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glfw\include;C:\Users\notme\OneDrive\Documents\Code Projects\fifi\third_party\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
