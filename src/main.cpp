@@ -54,9 +54,9 @@ int main() {
             {64, floorHalfHeight, 64}));
 
         // ramp
-        auto* ramp = world.addBody(RigidBody::createStatic({3, -1.5f, 0}, {3, 0.2f, 2}));
-        ramp->orientation           = Quaternion::fromAxisAngle({0,0,1}, 0.35f);
-        ramp->collider.halfExtents  = {3, 0.2f, 2};
+        auto* ramp = world.addBody(RigidBody::createStatic({3, -2.5f, 0}, {3, 0.2f, 2}));
+        ramp->orientation          = Quaternion::fromAxisAngle({0,0,1}, 0.35f);
+        ramp->collider.halfExtents = {3, 0.2f, 2};
 
         // stack of four boxes
         for (int i = 0; i < 4; i++) {
@@ -68,17 +68,23 @@ int main() {
         }
 
         // heavy ball
-        auto* ball = world.addBody(RigidBody::createSphere(3.0f, 0.6f, {6.0f, 1.0f, 0}));
-        ball->color          = {1.0f, 0.4f, 0.2f};
-        ball->restitution    = 0.3f;
-        ball->friction       = 0.5f;
-        ball->linearVelocity = {-4.0f, 0, 0};
+        //auto* ball = world.addBody(RigidBody::createSphere(3.0f, 0.6f, {6.0f, 1.0f, 0}));
+        //ball->color          = {1.0f, 0.4f, 0.2f};
+        //ball->restitution    = 0.3f;
+        //ball->friction       = 0.5f;
+        //ball->linearVelocity = {-4.0f, 0, 0};
 
         // bouncy ball 🤑
-        auto* bouncy = world.addBody(RigidBody::createSphere(0.5f, 0.4f, {0.0f, 4.0f, 0}));
+        auto* bouncy = world.addBody(RigidBody::createSphere(0.5f, 0.4f, {4.0f, 4.0f, 0}));
         bouncy->color       = {0.3f, 1.0f, 0.4f};
         bouncy->restitution = 0.8f;
-        bouncy->friction    = 0.2f;
+        bouncy->friction    = 0.1f;
+
+        // bouncy ball 2 🤑
+        auto* bouncy2 = world.addBody(RigidBody::createSphere(0.5f, 0.4f, {5.0f, 4.0f, 0}));
+        bouncy2->color       = {0.3f, 0.5f, 0.4f};
+        bouncy2->restitution = 0.1f;
+        bouncy2->friction    = 0.1f;
 
         // i love balls
 

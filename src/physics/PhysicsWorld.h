@@ -65,29 +65,57 @@ private:
             std::clamp(localCenter.z, -he.z, he.z)
         };
 
-        Vec3 diff = localCenter - closest;
+        Vec3  diff   = localCenter - closest;
         float distSq = diff.lengthSq();
 
-        if (distSq >= r * r) return false; // no collision 🥹
+        if (distSq >= r * r) return false;
 
         float dist = std::sqrt(distSq);
 
-        // normal in local space, then rotate to warudo
-        Vec3 localNormal = (dist < 1e-6f)
-                         ? Vec3{0, 1, 0}         // sphere center inside box
-                         : diff * (1.0f / dist);
+        Vec3 localNormal;
+        float penetration;
 
-        Vec3 worldNormal  = box.orientation.rotate(localNormal);
+        if (dist < 1e-6f) {
+            float overlaps[6] = {
+                he.x - localCenter.x,   // +x face
+                he.x + localCenter.x,   // -x face
+                he.y - localCenter.y,   // +y face
+                he.y + localCenter.y,   // -y face
+                he.z - localCenter.z,   // +z face
+                he.z + localCenter.z    // -z face
+            };
+            Vec3 normals[6] = {
+                {1,0,0}, {-1,0,0},
+                {0,1,0}, {0,-1,0},
+                {0,0,1}, {0,0,-1}
+            };
+
+            int   best    = 0;
+            float minOver = overlaps[0];
+            for (int k = 1; k < 6; k++) {
+                if (overlaps[k] < minOver) { minOver = overlaps[k]; best = k; }
+            }
+
+            localNormal = normals[best];
+            penetration = r + minOver;   // full sphere radius + face overlap
+        } else {
+            localNormal = diff * (1.0f / dist);   // points box-surface -> sphere-center
+            penetration = r - dist;
+        }
+
+        Vec3 worldNormal  = box.orientation.rotate(localNormal);  // box→sphere direction
         Vec3 worldClosest = box.position + box.orientation.rotate(closest);
 
-        m.normal = worldNormal;        // points sphere -> box center (basically away from box)
-        m.penetrationDepth = r - dist;
-        m.contactPoint = worldClosest;
+        // Normal convention: this function always returns "box → sphere" direction.
+        // The caller is responsible for flipping if needed to satisfy resolver B→A.
+        m.normal           = worldNormal;
+        m.penetrationDepth = penetration;
+        m.contactPoint     = worldClosest;
 
         ContactPoint cp;
-        cp.position = worldClosest;
-        cp.penetrationDepth = m.penetrationDepth;
-        m.contacts = { cp };
+        cp.position         = worldClosest;
+        cp.penetrationDepth = penetration;
+        m.contacts          = { cp };
 
         return true;
     }
@@ -97,7 +125,6 @@ private:
         broadphasePairs = broadphase(bodies);
 
         for (auto& [i, j] : broadphasePairs) {
-            if (i == 0 || j == 0) continue;
 
             auto& bi = bodies[i];
             auto& bj = bodies[j];
@@ -112,15 +139,18 @@ private:
 
             if (aBox && bBox) {
                 hit = SATBoxBox(*bi, *bj, m);
+
             } else if (aSphere && bBox) {
                 hit = sphereBoxCollide(*bi, *bj, m);
-                if (hit) m.normal = -m.normal;
+
             } else if (aBox && bSphere) {
                 hit = sphereBoxCollide(*bj, *bi, m);
+                if (hit) m.normal = -m.normal;
+
             } else {
                 // sphere-sphere via GJK
                 hit = GJKIntersect(bi->collider, bi->position, bi->orientation,
-                                bj->collider, bj->position, bj->orientation, m);
+                                   bj->collider, bj->position, bj->orientation, m);
                 if (hit) {
                     ContactPoint cp;
                     cp.position         = m.contactPoint;

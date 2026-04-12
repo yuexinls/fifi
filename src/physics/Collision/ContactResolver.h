@@ -157,8 +157,8 @@ static void resolvePosition(ContactManifold& contact) {
     if (A->isStatic() && B->isStatic()) return;
 
     const float SLOP       = 0.005f;
-    const float BAUMGARTE  = 0.2f;
-    const float MAX_CORR   = 0.01f;
+    const float BAUMGARTE  = 0.35f;
+    const float MAX_CORR   = 0.08f;
 
     float pen = contact.penetrationDepth - SLOP;
     if (pen <= 0.0f) return;
