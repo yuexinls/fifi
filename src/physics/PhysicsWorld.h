@@ -47,6 +47,51 @@ private:
             body->integrate(dt);
     }
 
+    static bool sphereBoxCollide(const RigidBody& sphere,
+                                 const RigidBody& box,
+                                 ContactManifold& m)
+    {
+        // transform sphere center into box local space
+        Vec3 localCenter = box.orientation.conjugate().rotate(
+            sphere.position - box.position);
+
+        Vec3 he = box.collider.halfExtents;
+        float r = sphere.collider.radius;
+
+        // closest point on box to sphere center (in local space)
+        Vec3 closest = {
+            std::clamp(localCenter.x, -he.x, he.x),
+            std::clamp(localCenter.y, -he.y, he.y),
+            std::clamp(localCenter.z, -he.z, he.z)
+        };
+
+        Vec3 diff = localCenter - closest;
+        float distSq = diff.lengthSq();
+
+        if (distSq >= r * r) return false; // no collision 🥹
+
+        float dist = std::sqrt(distSq);
+
+        // normal in local space, then rotate to warudo
+        Vec3 localNormal = (dist < 1e-6f)
+                         ? Vec3{0, 1, 0}         // sphere center inside box
+                         : diff * (1.0f / dist);
+
+        Vec3 worldNormal  = box.orientation.rotate(localNormal);
+        Vec3 worldClosest = box.position + box.orientation.rotate(closest);
+
+        m.normal = worldNormal;        // points sphere -> box center (basically away from box)
+        m.penetrationDepth = r - dist;
+        m.contactPoint = worldClosest;
+
+        ContactPoint cp;
+        cp.position = worldClosest;
+        cp.penetrationDepth = m.penetrationDepth;
+        m.contacts = { cp };
+
+        return true;
+    }
+
     void detectCollisions() {
         contacts.clear();
         broadphasePairs = broadphase(bodies);
@@ -59,20 +104,24 @@ private:
 
             bool aBox = (bi->collider.type == Collider::Type::Box);
             bool bBox = (bj->collider.type == Collider::Type::Box);
+            bool aSphere = !aBox;
+            bool bSphere = !bBox;
 
             ContactManifold m;
             bool hit = false;
 
             if (aBox && bBox) {
-                // SAT
                 hit = SATBoxBox(*bi, *bj, m);
+            } else if (aSphere && bBox) {
+                hit = sphereBoxCollide(*bi, *bj, m);
+                if (hit) m.normal = -m.normal;
+            } else if (aBox && bSphere) {
+                hit = sphereBoxCollide(*bj, *bi, m);
             } else {
-                // GJK+EPA for sphere-sphere and sphere-box
+                // sphere-sphere via GJK
                 hit = GJKIntersect(bi->collider, bi->position, bi->orientation,
                                 bj->collider, bj->position, bj->orientation, m);
-
                 if (hit) {
-                    // for sphere contacts wrap EPA point
                     ContactPoint cp;
                     cp.position         = m.contactPoint;
                     cp.penetrationDepth = m.penetrationDepth;
@@ -88,8 +137,7 @@ private:
             m.bodyA = bi.get();
             m.bodyB = bj.get();
 
-            if (m.valid())
-                contacts.push_back(m);
+            if (m.valid()) contacts.push_back(m);
         }
     }
 
