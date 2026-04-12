@@ -198,28 +198,13 @@ private:
             if (body->isStatic()) continue;
 
             float halfHeight = body->scale.y * 0.5f;
-            float bottom = body->position.y - halfHeight;
+            float bottom     = body->position.y - halfHeight;
 
-            if (bottom < groundY) {
-                body->position.y = groundY + halfHeight;
-
-                if (body->linearVelocity.y < 0) {
-                    body->linearVelocity.y *= -body->restitution;
-                    
-                    // kill tiny bounces
-                    if (std::abs(body->linearVelocity.y) < 0.05f)
-                        body->linearVelocity.y = 0.0f;
-                }
-
-                // simple friction on horizontal velocity
-                body->linearVelocity.x *= (1.0f - body->friction * 0.1f);
-                body->linearVelocity.z *= (1.0f - body->friction * 0.1f);
-
-                if (body->linearVelocity.lengthSq() < 0.1f) {
-                    body->angularVelocity *= 0.98f;
-                    if (body->angularVelocity.lengthSq() < 0.001f)
-                        body->angularVelocity = {};
-                }
+            const float TUNNEL_THRESHOLD = body->scale.y;
+            if (bottom < groundY - TUNNEL_THRESHOLD) {
+                body->position.y      = groundY + halfHeight;
+                body->linearVelocity  = {};
+                body->angularVelocity = {};
             }
         }
     }

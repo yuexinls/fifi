@@ -44,49 +44,21 @@ int main() {
 
         // build scene
         PhysicsWorld world;
-
         float floorHalfHeight = 0.5f;
-        world.groundY = -3.0f;
+        world.groundY = -1000.0f;
 
-        // floor
-        auto* floor = world.addBody(RigidBody::createStatic(
-            {0, world.groundY - floorHalfHeight, 0},
-            {64, floorHalfHeight, 64}));
+        world.addBody(RigidBody::createStatic({0, -0.5f, 0}, {10, 0.5f, 10}));
 
-        // ramp
-        auto* ramp = world.addBody(RigidBody::createStatic({3, -2.5f, 0}, {3, 0.2f, 2}));
-        ramp->orientation          = Quaternion::fromAxisAngle({0,0,1}, 0.35f);
-        ramp->collider.halfExtents = {3, 0.2f, 2};
+        // box rotated 45 degrees around Z
+        auto* box = world.addBody(RigidBody::createBox(1.0f, {0.5f,0.5f,0.5f}, {0,2,0}));
+        box->orientation = Quaternion::fromAxisAngle({0,0,1}, 0.785f); // 45 deg
+        box->restitution = 0.0f;
+        box->friction    = 0.5f;
 
-        // stack of four boxes
-        for (int i = 0; i < 4; i++) {
-            auto* b = world.addBody(
-                RigidBody::createBox(1.0f, {0.5f, 0.5f, 0.5f},
-                                    {-3.0f, -2.5f + i * 1.2f, 0.0f}));
-            b->restitution = 0.1f;
-            b->friction    = 0.7f;
-        }
-
-        // heavy ball
-        //auto* ball = world.addBody(RigidBody::createSphere(3.0f, 0.6f, {6.0f, 1.0f, 0}));
-        //ball->color          = {1.0f, 0.4f, 0.2f};
-        //ball->restitution    = 0.3f;
-        //ball->friction       = 0.5f;
-        //ball->linearVelocity = {-4.0f, 0, 0};
-
-        // bouncy ball 🤑
-        auto* bouncy = world.addBody(RigidBody::createSphere(0.5f, 0.4f, {4.0f, 4.0f, 0}));
-        bouncy->color       = {0.3f, 1.0f, 0.4f};
-        bouncy->restitution = 0.8f;
-        bouncy->friction    = 0.1f;
-
-        // bouncy ball 2 🤑
-        auto* bouncy2 = world.addBody(RigidBody::createSphere(0.5f, 0.4f, {5.0f, 4.0f, 0}));
-        bouncy2->color       = {0.3f, 0.5f, 0.4f};
-        bouncy2->restitution = 0.1f;
-        bouncy2->friction    = 0.1f;
-
-        // i love balls
+        assert(!world.contacts.empty());
+        for (auto& c : world.contacts)
+            assert(c.penetrationDepth < 0.05f);
+        printf("TEST 4 PASSED: rotated box contact depth < 0.05\n");
 
         // fixed timestep
         const double FIXED_DT = 1.0 / 120.0; // 120 hz

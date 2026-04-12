@@ -102,12 +102,13 @@ static void generateSATContacts(ContactManifold& m,
     float rH1 = refHalf[rt1],       rH2 = refHalf[rt2];
 
     // incident face (most anti-aligned with n on Inc)
-    int   incFace = 0;
-    float worstDot = 1.0f;
+    int   incFace  = 0;
+    float bestIncDot = -1.0f;
     for (int i = 0; i < 3; i++) {
-        float d = incAxes[i].dot(n);
-        if (d < worstDot) { worstDot = d; incFace = i; }
+        float d = std::abs(incAxes[i].dot(n));
+        if (d > bestIncDot) { bestIncDot = d; incFace = i; }
     }
+
     Vec3  incFaceNormal = (incAxes[incFace].dot(n) < 0.0f)
                         ?  incAxes[incFace]
                         : -incAxes[incFace];
