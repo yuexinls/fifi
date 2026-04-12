@@ -5,6 +5,7 @@
 #include "Collision/ContactManifold.h"
 #include "Collision/ContactResolver.h"
 #include "Collision/ContactGenerator.h"
+#include "Collision/SAT.h"
 #include "PhysicsWatchdog.h"
 #include <vector>
 #include <memory>
@@ -51,30 +52,41 @@ private:
         broadphasePairs = broadphase(bodies);
 
         for (auto& [i, j] : broadphasePairs) {
-            // floor plane is handled separately so ig we can skip it here
             if (i == 0 || j == 0) continue;
 
             auto& bi = bodies[i];
             auto& bj = bodies[j];
 
+            bool aBox = (bi->collider.type == Collider::Type::Box);
+            bool bBox = (bj->collider.type == Collider::Type::Box);
+
             ContactManifold m;
-            bool hit = GJKIntersect(
-                bi->collider, bi->position, bi->orientation,
-                bj->collider, bj->position, bj->orientation,
-                m);
+            bool hit = false;
+
+            if (aBox && bBox) {
+                // SAT
+                hit = SATBoxBox(*bi, *bj, m);
+            } else {
+                // GJK+EPA for sphere-sphere and sphere-box
+                hit = GJKIntersect(bi->collider, bi->position, bi->orientation,
+                                bj->collider, bj->position, bj->orientation, m);
+
+                if (hit) {
+                    // for sphere contacts wrap EPA point
+                    ContactPoint cp;
+                    cp.position         = m.contactPoint;
+                    cp.penetrationDepth = m.penetrationDepth;
+                    m.contacts          = { cp };
+                }
+            }
 
             if (!hit) continue;
-
-            m.penetrationDepth = std::min(m.penetrationDepth, 0.2f);
-
-            if (m.penetrationDepth <= 0.0f
-            || m.penetrationDepth >  5.0f
-            || m.normal.lengthSq() < 0.9f)
-                continue;
+            if (m.contacts.empty()) continue;
+            if (m.penetrationDepth <= 0.0f || m.penetrationDepth > 2.0f) continue;
+            if (m.normal.lengthSq() < 0.9f) continue;
 
             m.bodyA = bi.get();
             m.bodyB = bj.get();
-            enrichManifold(m, *bi, *bj);
 
             if (m.valid())
                 contacts.push_back(m);
