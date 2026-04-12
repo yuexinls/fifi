@@ -120,17 +120,45 @@ private:
         return true;
     }
 
+    static bool sphereSphereCollide(const RigidBody& A, const RigidBody& B,
+                                    ContactManifold& m)
+    {
+        Vec3 delta = A.position - B.position; // B->A direction vector
+        float dist = delta.length();
+        float sumR = A.collider.radius + B.collider.radius;
+
+        if (dist >= sumR) return false;
+
+        if (dist < 1e-6f) {
+            // arbitrary separator axis
+            m.normal = {0.0f, 1.0f, 0.0f};
+        } else {
+            m.normal = delta * (1.0f / dist); // unit vector B->A
+        }
+
+        m.penetrationDepth = sumR - dist;
+
+        // contact point (point on B's surface facing A)
+        m.contactPoint = B.position + m.normal * B.collider.radius;
+
+        ContactPoint cp;
+        cp.position = m.contactPoint;
+        cp.penetrationDepth = m.penetrationDepth;
+        m.contacts = { cp };
+
+        return true;
+    }
+
     void detectCollisions() {
         contacts.clear();
         broadphasePairs = broadphase(bodies);
 
         for (auto& [i, j] : broadphasePairs) {
-
             auto& bi = bodies[i];
             auto& bj = bodies[j];
 
-            bool aBox = (bi->collider.type == Collider::Type::Box);
-            bool bBox = (bj->collider.type == Collider::Type::Box);
+            bool aBox    = (bi->collider.type == Collider::Type::Box);
+            bool bBox    = (bj->collider.type == Collider::Type::Box);
             bool aSphere = !aBox;
             bool bSphere = !bBox;
 
@@ -148,15 +176,8 @@ private:
                 if (hit) m.normal = -m.normal;
 
             } else {
-                // sphere-sphere via GJK
-                hit = GJKIntersect(bi->collider, bi->position, bi->orientation,
-                                   bj->collider, bj->position, bj->orientation, m);
-                if (hit) {
-                    ContactPoint cp;
-                    cp.position         = m.contactPoint;
-                    cp.penetrationDepth = m.penetrationDepth;
-                    m.contacts          = { cp };
-                }
+                // sphere-sphere (analytical)
+                hit = sphereSphereCollide(*bi, *bj, m);
             }
 
             if (!hit) continue;
