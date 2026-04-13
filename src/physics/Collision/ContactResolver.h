@@ -156,9 +156,9 @@ static void resolvePosition(ContactManifold& contact) {
     if (!A || !B) return;
     if (A->isStatic() && B->isStatic()) return;
 
-    const float SLOP       = 0.005f;
-    const float BAUMGARTE  = 0.35f;
-    const float MAX_CORR   = 0.08f;
+    const float SLOP       = 0.001f;
+    const float BAUMGARTE  = 0.5f;
+    const float MAX_CORR   = 0.1f;
 
     float pen = contact.penetrationDepth - SLOP;
     if (pen <= 0.0f) return;
@@ -176,7 +176,8 @@ static void resolvePosition(ContactManifold& contact) {
 // main solver (persistent state per contact point across iterations)
 inline void resolveAllContacts(std::vector<ContactManifold>& contacts,
                                 float dt,
-                                int iterations = 10)
+                                int velocityIterations = 10,
+                                int positionIterations = 4)
 {
     // allocate persistent state for each contact point
     // state persists across iterations but *not* across frames
@@ -189,26 +190,25 @@ inline void resolveAllContacts(std::vector<ContactManifold>& contacts,
     }
 
     // velocity iterations
-    for (int iter = 0; iter < iterations; iter++) {
+    for (int iter = 0; iter < velocityIterations; iter++) {
         for (int ci = 0; ci < (int)contacts.size(); ci++) {
             auto& c = contacts[ci];
             if (!c.valid()) continue;
-
             for (int pi = 0; pi < (int)c.contacts.size(); pi++) {
-                auto& cp    = c.contacts[pi];
-                auto& state = states[ci].points[pi];
                 resolvePoint(c.bodyA, c.bodyB,
-                             cp.position, c.normal,
-                             cp.penetrationDepth,
-                             state);
+                             c.contacts[pi].position, c.normal,
+                             c.contacts[pi].penetrationDepth,
+                             states[ci].points[pi]);
             }
         }
     }
 
-    // one positional correction pass
-    for (auto& c : contacts) {
-        if (c.valid())
-            resolvePosition(c);
+    // Position correction (multiple passes converge faster without jitter)
+    for (int posIter = 0; posIter < positionIterations; posIter++) {
+        for (auto& c : contacts) {
+            if (c.valid())
+                resolvePosition(c);
+        }
     }
 }
 

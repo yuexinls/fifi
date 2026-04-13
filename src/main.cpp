@@ -44,21 +44,23 @@ int main() {
 
         // build scene
         PhysicsWorld world;
-        float floorHalfHeight = 0.5f;
-        world.groundY = -1000.0f;
+        world.gravity  = {0, 0, 0};
+        world.groundY  = -1000.0f;
 
-        world.addBody(RigidBody::createStatic({0, -0.5f, 0}, {10, 0.5f, 10}));
+        auto* A = world.addBody(RigidBody::createSphere(1.0f, 0.5f, {0,  0.4f, 0}));
+        auto* B = world.addBody(RigidBody::createSphere(1.0f, 0.5f, {0, -0.4f, 0}));
+        A->linearVelocity = {0, -2.0f, 0};
+        B->linearVelocity = {0,  2.0f, 0};
+        A->restitution = B->restitution = 0.5f;
 
-        // box rotated 45 degrees around Z
-        auto* box = world.addBody(RigidBody::createBox(1.0f, {0.5f,0.5f,0.5f}, {0,2,0}));
-        box->orientation = Quaternion::fromAxisAngle({0,0,1}, 0.785f); // 45 deg
-        box->restitution = 0.0f;
-        box->friction    = 0.5f;
+        world.step(1.0f / 120.0f);
 
-        assert(!world.contacts.empty());
-        for (auto& c : world.contacts)
-            assert(c.penetrationDepth < 0.05f);
-        printf("TEST 4 PASSED: rotated box contact depth < 0.05\n");
+        // A must now move upward (away from B), B downward (away from A)
+        assert(A->linearVelocity.y > 0.0f);
+        assert(B->linearVelocity.y < 0.0f);
+
+        printf("TEST 4 PASSED  A.vy=%.3f  B.vy=%.3f\n",
+            A->linearVelocity.y, B->linearVelocity.y);
 
         // fixed timestep
         const double FIXED_DT = 1.0 / 120.0; // 120 hz

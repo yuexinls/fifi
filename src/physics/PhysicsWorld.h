@@ -29,8 +29,7 @@ public:
         applyGravity();
         integrateBodies(dt);
         detectCollisions();
-        resolveAllContacts(contacts, dt, 12);
-        resolveGroundPlane(); // replaced later
+        resolveAllContacts(contacts, dt, 12, 4);
         watchdog.analyse(bodies, contacts);
     }
 
@@ -103,11 +102,9 @@ private:
             penetration = r - dist;
         }
 
-        Vec3 worldNormal  = box.orientation.rotate(localNormal);  // box→sphere direction
+        Vec3 worldNormal  = box.orientation.rotate(localNormal);  // box->sphere direction
         Vec3 worldClosest = box.position + box.orientation.rotate(closest);
 
-        // Normal convention: this function always returns "box → sphere" direction.
-        // The caller is responsible for flipping if needed to satisfy resolver B→A.
         m.normal           = worldNormal;
         m.penetrationDepth = penetration;
         m.contactPoint     = worldClosest;
