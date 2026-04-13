@@ -48,7 +48,7 @@ int main() {
         world.groundY  = -1000.0f;
 
         auto* A = world.addBody(RigidBody::createSphere(1.0f, 0.5f, {0,  0.4f, 0}));
-        auto* B = world.addBody(RigidBody::createSphere(1.0f, 0.5f, {0, -0.4f, 0}));
+        auto* B = world.addBody(RigidBody::createSphere(1.0f, 0.5f, {0, -0.4f, 0})); // balls 🥹
         A->linearVelocity = {0, -2.0f, 0};
         B->linearVelocity = {0,  2.0f, 0};
         A->restitution = B->restitution = 0.5f;

@@ -287,7 +287,7 @@ static ContactManifold EPA(
                 addEdge(f.b, f.c);
                 addEdge(f.c, f.a);
             } else {
-                newFaces.push_back(f);
+                newFaces.push_back(f); // fortnite
             }
         }
 
